@@ -1,0 +1,257 @@
+<html>
+
+<!-- Mangler: Smudere formatering av tekst + Bedre forklaringstekst i svar-->
+
+<head>
+	<link href="http://vipps.no/static/prod/style.css" rel="stylesheet">
+	<style>
+	body{
+		box-sizing: border-box;
+		margin-left: 10px;
+					}
+h2{
+	margin-top: 10px;
+	margin-left: 5px;
+}
+p{
+	margin-bottom: 0px;
+}
+
+	.spm{
+		float: left;
+		width: 450;
+		margin-right: 10px;
+	}
+	.spm div{
+		margin-bottom:10px;		
+		background-color: #FEF9F5;
+		padding: 10px;
+		border:1px;
+		border-color: #F38100;
+		border-style: solid;
+		border-radius: 3px;
+		font: sans-serif;
+
+	}
+
+	.spm div:hover{
+		background-color:#FAE7D6;
+		border:1px;
+		border-color: #F38100;
+		border-style: solid;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+
+	
+
+	.svar{
+		float: left;
+		width: 300px;
+		
+	}
+	.svar div{
+		
+		background-color: #FAE7D6;
+				padding: 10px;
+				align-items: center;
+
+	}
+
+	.svaret{
+		
+	}
+	.produkt{
+		background-color:##FAE7D6 !important;
+		margin-top: 10px !important;
+
+
+	}
+
+	
+	</style>
+
+
+
+
+
+	<script type="text/javascript">
+function toggle(el, svarId){
+	  var e = document.getElementById(svarId);
+	  console.log(el);
+	  var input=el.children[0];	
+
+		if(input.checked)
+          		input.checked=false;
+       else
+         		input.checked=true;
+
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+      toggle2();
+  }
+function toggle2(){
+	
+//lys opp hvis en av boksene som mathcer produkt er tent
+
+	
+}
+      
+
+	</script>
+</head>
+<body>
+	<div>
+		<div class="spm">
+			<h2> Hva beskriver din bedrift? Kryss gjerne av fler!</h2>
+			<div  onclick="toggle(this,'1');">
+				<input type="checkbox">
+					1 Har ett eller flere produkter
+					<br>
+			</div>
+			<div onclick="toggle(this,'2');">
+				<input type="checkbox">
+					2 Selger mat
+					<br>
+			</div>
+			<div onclick="toggle(this,'3');">
+				<input type="checkbox">
+					3 Har eller har planer om Take away 
+					<br>
+			</div>
+			<div onclick="toggle(this,'4');">
+				<input type="checkbox">
+					4 Har eller har planer om forhåndsbestilling
+					<br>
+			</div>
+			<div onclick="toggle(this,'5');">
+				<input type="checkbox">
+					5 Selger billetter 
+					<br> 
+			</div>
+			<div onclick="toggle(this,'6');">
+				<input type="checkbox">
+					6 Bruker kundeinfo i bestilling ( Navn, Telefonnr, Adresse, Reg. nummer el.)
+					<br>
+			</div>
+			<div onclick="toggle(this,'7');">
+				<input type="checkbox">
+					7 Har et Kassesystem?
+					<br>
+			</div>
+			<div onclick="toggle(this,'8');">
+				<input type="checkbox">
+					8 Har bonusordning ( Klippekort eller 2for1 el.)
+					<br>
+			</div>
+				<div onclick="toggle(this,'10');">
+				<input type="checkbox">
+					10 Tar imot donasjoner
+					<br>
+			</div>
+			<div onclick="toggle(this,'9');">
+				<input type="checkbox">
+					9 Sender ut faktura
+					<br>
+			</div>
+		
+			
+			<h3>app eller nettsted?<h3>
+				<div  onclick="toggle(this,'11');">
+				<input type="checkbox">
+					11 Har eller vil ha betaling i nettside
+					<br>
+				</div>
+				<div class="svaret" onclick="toggle(this,'12');">
+				<input type="checkbox">
+					12 Har eller vil ha betaling i app
+					<br>
+				</div>
+		</div>
+	</div>
+
+		<div class="svar">
+			<h2> Du trenger:</h2>
+			<div class="produkt" id="GO">
+				Vipps GO <a href="https://vippsbedrift.no/signup/vippsGo/"> Bestill </a> 
+			</div>
+			<div class="svaret"  id="1" style="display: none">
+				<p>
+				- Oppsett av butikk <br>
+				- Lag meny <br>
+					- Ordrehåndtering <br>
+					- Åpningstider <br>
+					- Utsjekk av varer <br>
+					- Ordrekommentar <br>
+					- MVA <br>
+					- Flerbruker (admin og bruker) <br>
+					- Rapporter</p>
+			</div>
+			<div class="svaret" id="2" style="display: none">
+				2. - Mulighet til å legge ved Tips<br>
+- Oppgi Allergener<br>
+- Tilvalg/Modifiers<br>
+
+
+			</div>
+			<div class="svaret" id="3" style="display: none">
+				3 - Støtter Take away/levering<br>
+			</div>
+			<div class="svaret" id="4" style="display: none">
+				4 - Støtter Forhåndsbestilling/tid
+			</div>
+			<div class="svaret" id="5" style="display: none">
+				5 
+			</div>
+			<div class="svaret" id="6" style="display: none">
+				6 Henter inn data om bruker<br>
+Navn/Adresse/epost<br>
+Bord-/bil-/medlemsnummer etc.<br>
+
+			</div>
+			<div class="svaret" id="7" style="display: none">
+				7 - KDR <br>
+- PC Kasse<br> 
+- SMS<br>
+- Brukerstøtte (for Vipps ansatte)<br>
+- På vegne av<br>
+- Intern rollestyring<br>
+
+			</div>
+			<div class="svaret" id="8" style="display: none">
+				8
+			</div>
+
+	<div class="produkt" id="paNett">
+				Vipps på nett <a href="https://vippsbedrift.no/signup/vippspanett/"> Bestill </a> 
+			</div>
+
+			<div class="svaret"  id="10" style="display: none">
+				10 - Kunde kan gi valgfritt beløp <br>
+- Innsamling av informasjon <br>
+- Skatterapport <br>
+</div>
+			<div class="produkt" id="inAPP">
+				Vipps inAPP
+				<a href="https://vippsbedrift.no/signup/vippspanett/"> Bestill</a>
+			</div>
+			
+			<div class="svaret"  id="11" style="display: none">
+				11 Har eller vil ha betaling i nettside
+			</div>
+			<div class="svaret"  id="12" style="display: none">
+				12 Har eller vil ha betaling i app
+			</div>
+
+	<div class="produkt" id="Faktura">
+				Faktura <a href="https://vippsbedrift.no/signup/vippsGo/"> Bestill </a> 
+			</div>
+			<div class="svaret" id="9" style="display: none">
+				9 Sende faktura rett i Vipps appen for tidligere betaling
+			</div>
+
+		</div>
+	</div>
+</body>
