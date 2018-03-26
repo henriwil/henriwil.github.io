@@ -12,21 +12,43 @@
 	body{
 		box-sizing: border-box;
 		margin-left: 10px;
+		/*background-color: #ffd7b5;*/
 					}
 h2{
 	margin-top: 10px;
 	margin-left: 5px;
 }
+h3{
+	color:#6656AF;
+	font-weight: bold;
+}
+h3 a{
+		font-weight: normal;
+
+}
+
+h4{
+		font-weight: bold;
+
+}
 p{
 	margin-bottom: 0px;
+	margin: -5px;
 }
 
 	.spm{
 		float: left;
 		width: 450;
 		margin-right: 10px;
+
 	}
-	.spm div{
+	.Vis_mer{
+		opacity: 0;
+		margin:0;
+		padding:0 !important;
+
+	}
+/*	.spm div{
 		margin-bottom:10px;		
 		background-color: #FEF9F5;
 		padding: 10px;
@@ -35,8 +57,10 @@ p{
 		border-style: solid;
 		border-radius: 3px;
 		font: sans-serif;
+		border-radius: 2px;
+  height: 50px;
 
-	}
+	}*/
 
 	.spm div:hover{
 		background-color:#FAE7D6;
@@ -47,16 +71,14 @@ p{
 		cursor: pointer;
 	}
 
-	
-
 	.svar{
 		float: left;
-		width: 300px;
+		width: 450;
 		
 	}
 	.svar div{
 		
-		background-color: #FAE7D6;
+		background-color: white;
 				padding: 10px;
 				align-items: center;
 
@@ -66,13 +88,37 @@ p{
 		
 	}
 	.produkt{
-		background-color:##FAE7D6 !important;
+		background-color:white !important;
 		margin-top: 10px !important;
-
+		border-color: black;
+		border-bottom: 1px;
+		border-bottom-style: solid;
+	}
+	.produkt .h2{
 
 	}
 
+	.img{
+width: 40;
+height:80;
+	}
+
+	.img:hover{
+    color: #424242; 
+  -webkit-transition: all .1s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  position: absolute;
+  transform: scale(4);
+  -ms-transform: scale(4); /* IE 9 */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+
+}
 	
+
 	</style>
 
 
@@ -94,9 +140,15 @@ function toggle(el, svarId){
           e.style.display = 'none';
        else
           e.style.display = 'block';
+
+
+      
+
+
       toggle2();
   }
 function toggle2(){
+
 	
 //lys opp hvis en av boksene som mathcer produkt er tent
 
@@ -109,61 +161,56 @@ function toggle2(){
 <body>
 	<div>
 		<div class="spm">
-			<h2> Hva beskriver din bedrift? Kryss gjerne av fler!</h2>
+			<h2> Fortell litt om din bedrift </h2>
+			<h5> </h5>
 			<div  onclick="toggle(this,'1');">
 				<input type="checkbox">
-					1 Har ett eller flere produkter
+					1 Vi selger mer enn ett produkt
 					<br>
 			</div>
 			<div onclick="toggle(this,'2');">
-				<input type="checkbox">
-					2 Selger mat
-					<br>
+					<input type="checkbox">
+					2 Vi selger mat
 			</div>
 			<div onclick="toggle(this,'3');">
 				<input type="checkbox">
-					3 Har eller har planer om Take away 
+					3 Vi har Take away eller forhåndsbestilling
 					<br>
 			</div>
-			<div onclick="toggle(this,'4');">
-				<input type="checkbox">
-					4 Har eller har planer om forhåndsbestilling
-					<br>
-			</div>
+	
 			<div onclick="toggle(this,'5');">
 				<input type="checkbox">
-					5 Selger billetter 
+					5 Vi selger billetter 
 					<br> 
 			</div>
 			<div onclick="toggle(this,'6');">
 				<input type="checkbox">
-					6 Bruker kundeinfo i bestilling ( Navn, Telefonnr, Adresse, Reg. nummer el.)
+					6 Vi bruker kundeinfo i bestilling( Navn, Telefonnr, Adresse, Reg. nummer el.)
 					<br>
 			</div>
 			<div onclick="toggle(this,'7');">
 				<input type="checkbox">
-					7 Har et Kassesystem?
+					7 Vi har et kassesystem
 					<br>
 			</div>
 			<div onclick="toggle(this,'8');">
 				<input type="checkbox">
-					8 Har bonusordning ( Klippekort eller 2for1 el.)
+					8 Vi har bonusordning ( Klippekort eller 2for1 el.)
 					<br>
 			</div>
-				<div onclick="toggle(this,'10');">
-				<input type="checkbox">
-					10 Tar imot donasjoner
-					<br>
-			</div>
+			
 			<div onclick="toggle(this,'9');">
 				<input type="checkbox">
-					9 Sender ut faktura
+					9 Vi sender ut faktura
 					<br>
 			</div>
-		
-			
-			<h3>app eller nettsted?<h3>
-				<div  onclick="toggle(this,'11');">
+			<div onclick="toggle(this,'10');">
+				<input type="checkbox">
+					10 Vi tar imot donasjoner
+					<br>
+			</div>
+							
+			<div  onclick="toggle(this,'11');">
 				<input type="checkbox">
 					11 Har eller vil ha betaling i nettside
 					<br>
@@ -177,84 +224,146 @@ function toggle2(){
 	</div>
 
 		<div class="svar">
-			<h2> Du trenger:</h2>
-			<div class="produkt" id="GO">
-				Vipps GO <a href="https://vippsbedrift.no/signup/vippsGo/"> Bestill </a> 
+			<h2> Da bør du sjekke ut:</h2>
+		<div class="produkt"  id="GO">
+				<h3> VippsGo <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsGo/"> Bestill VippsGo</a> 
+				</h3>
 			</div>
 			<div class="svaret"  id="1" style="display: none">
-				<p>
-				- Oppsett av butikk <br>
-				- Lag meny <br>
-					- Ordrehåndtering <br>
-					- Åpningstider <br>
-					- Utsjekk av varer <br>
-					- Ordrekommentar <br>
-					- MVA <br>
-					- Flerbruker (admin og bruker) <br>
-					- Rapporter</p>
+				<h4>Få en digital meny i Vipps</h4> 
+				- Vis frem din bedrifts utvalg for 2,8 millioner Vippsere
+				- Få anvendlige salgsrapporter <br>
+				/BILDE
+				<div type="checkbox" onclick="toggle(this,'20');">
+					<input class="Vis_mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="20" style="display: none">
+				- Kunde kan legge til Ordrekommentar<br>
+				- Ha flere brukere med ulike rettigheter(feks: dagligleder, revisor og selger) <br>
+				</div>
 			</div>
 			<div class="svaret" id="2" style="display: none">
-				2. - Mulighet til å legge ved Tips<br>
-- Oppgi Allergener<br>
-- Tilvalg/Modifiers<br>
-
-
+				<h4 class "overskrift">Matsalg</h4>
+				Senk presset på servitører og øk salget: La kundene bestille og betale mat og drikke i Vipps. Her kan de både oppgi allergener og gi tips!
+				<div type="checkbox" onclick="toggle(this,'21');">
+					<input class="Vis_mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="21" style="display: none">
+				Kunden kan enten hente i kassen eller oppgi bordnummer for levering til bordet! <br> Selve Bestillingen kan sendes direkte til alle elektroniske flater. Kan også integreres med bongprinter (kjøpes og installeres av Kontroll Elektro)<br>
+				<!-- <img class="img" src="water.jpg" >-->
+				</div>
+				
 			</div>
 			<div class="svaret" id="3" style="display: none">
-				3 - Støtter Take away/levering<br>
+				<h4 class "overskrift">Forhåndsbestilling og Take away</h4>
+				Slipp telefonkø for bestilling: Kundene bestiller og betaler i Vipps og henter etter en leveringstid satt av dere. <br> Vipps så har dere Take Away!
+<div type="checkbox" onclick="toggle(this,'22');">
+					<input class="Vis_mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="22" style="display: none">
+Man kan enkelt legge til et alternativ om levering, med en selvbestemt leveringsgebyr. Adressen oppgir kunden i bestillingen.
+				</div>
+
 			</div>
 			<div class="svaret" id="4" style="display: none">
-				4 - Støtter Forhåndsbestilling/tid
+				4 - 
+
 			</div>
 			<div class="svaret" id="5" style="display: none">
-				5 
-			</div>
+				<h4> Billettsalg</h4>
+				Enkel og billig håndtering av billettsalg, for store og små arrangement. Kundene finner og betaler for billettene i Vipps, fra et utvalg du setter opp i en fei. 
+<div type="checkbox" onclick="toggle(this,'23');">
+					<input class="Vis_mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="23" style="display: none">
+Dere godkjenner en brukt billett med å taste en selvvalgt kode i kundens Vipps.
+Man kan også legge til flere bruk i en billett, som et klippekort for flere turer.
+				</div>
+
+							</div>
+
 			<div class="svaret" id="6" style="display: none">
-				6 Henter inn data om bruker<br>
-Navn/Adresse/epost<br>
-Bord-/bil-/medlemsnummer etc.<br>
+				<h4>Kundeinformasjon</h4>
+				I hver bestilling kan man be om informasjon om kunden <br>
+				Navn, adresse og epost er standard.<br> 
+<div type="checkbox" onclick="toggle(this,'24');">
+					<input class="Vis mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="24" style="display: none">
+Man kan også definer feltet selv og be om spesifikk date, som medlemsnummer, reg. nummer eller favorittfarge! 
+				</div>
+
 
 			</div>
 			<div class="svaret" id="7" style="display: none">
-				7 - KDR <br>
-- PC Kasse<br> 
-- SMS<br>
-- Brukerstøtte (for Vipps ansatte)<br>
-- På vegne av<br>
-- Intern rollestyring<br>
+				<h4> Kasseintegrering</h4> VippsGo har ferdige integrasjoner med: PC Kasse, SMS, RetailPOS og KDR; slik at alt blir avstemt og samlet på ett sted med kun én salgsrapport.
+<div type="checkbox" onclick="toggle(this,'25');">
+					<input class="Vis mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="25" style="display: none">
+I tillegg kan du definere rettighetsnivå i appen til ulike ansatte, slik du er vant til fra kassen.
+
+				</div>
 
 			</div>
 			<div class="svaret" id="8" style="display: none">
-				8
+				<h4>Bonusordning</h4>Hver ting du selger fra menyen kan få et klippekort tilknyttet, som kun du kan krysse av! <br> Her kan man skape smarte kampanjer!
 			</div>
-
-	<div class="produkt" id="paNett">
-				Vipps på nett <a href="https://vippsbedrift.no/signup/vippspanett/"> Bestill </a> 
-			</div>
-
 			<div class="svaret"  id="10" style="display: none">
-				10 - Kunde kan gi valgfritt beløp <br>
-- Innsamling av informasjon <br>
-- Skatterapport <br>
-</div>
+				<h4>Donasjon: Giverpakker og skatterapport</h4> Tilby en meny av ulike givermuligheter og ha åpent for valgfritt beløp, enkelt satt opp og synlig for alle med Vipps<br> Når donasjonene er samlet stiller vi med ferdig skatterapport!<br>
+<div type="checkbox" onclick="toggle(this,'26');">
+					<input class="Vis mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="26" style="display: none">
+For å holde kontakten, kan man også be om givers navn og kontaktinformasjon når donasjonen utføres.  
+				</div>
+
+				 
+				</div>
+
+			<div class="produkt" id="paNett">
+				<h3>Vipps på nett <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippspanett/"> Bestill Vipps på Nett</a> </h3>
+			</div>
+
+			<div class="svaret"  id="11" style="display: none">
+				<h4>Vipps utsjekk i Nettbutikk</h4>
+					Vipps på nett gjør betaling superenkelt ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare mobilnummer. <br>
+					Vi kan hente ut leveringsinfo, så alt kunden trenger bare å bekreftet kjøpet.
+				<div type="checkbox" onclick="toggle(this,'27');">
+					<input class="Vis mer" type="checkbox"> Vis mer
+				</div>
+				
+				<div class="svarutv"  id="27" style="display: none">
+					Med Vipps Hurtigkasse kan kunden også sjekke ut direkte fra et av dine produkter, med 5 klikk.
+				</div>
+			</div>						 
+
 			<div class="produkt" id="inAPP">
-				Vipps inAPP
-				<a href="https://vippsbedrift.no/signup/vippspanett/"> Bestill</a>
+				<h3>Vipps i App
+				<a class="button primary" style="float: right; padding: 12" href="https://vippsbedrift.no/signup/vippsiapp/"> Bestill Vipps i App</a></h3>
 			</div>
 			
-			<div class="svaret"  id="11" style="display: none">
-				11 Har eller vil ha betaling i nettside
-			</div>
+			 
 			<div class="svaret"  id="12" style="display: none">
-				12 Har eller vil ha betaling i app
+				Vipps i App gjør betaling i din app superenkelt, ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare mobilnummer.
 			</div>
 
 	<div class="produkt" id="Faktura">
-				Faktura <a href="https://vippsbedrift.no/signup/vippsGo/"> Bestill </a> 
+				<h3>Vipps Faktura <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsfaktura"> Bestill Vipps Faktura</a> </h3>
 			</div>
 			<div class="svaret" id="9" style="display: none">
-				9 Sende faktura rett i Vipps appen for tidligere betaling
+				<h4>Send regninger ut i Vipps</h4>Lar deg sende faktura rett i Vipps til kundene <br>
+				Gjør opplevelsen av faktura kjappere og bedre!
 			</div>
+
+			
 
 		</div>
 	</div>
