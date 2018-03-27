@@ -40,6 +40,8 @@ p{
 		float: left;
 		width: 450;
 		margin-right: 10px;
+		padding-bottom:5px;
+		margin-left: 10px;
 
 	}
 	.Vis_mer{
@@ -47,6 +49,7 @@ p{
 		margin:0;
 		padding:0 !important;
 		margin-bottom: 0px;
+		margin:0px !important
 
 	}
 /*	.spm div{
@@ -96,8 +99,8 @@ p{
 		background-color:white !important;
 		margin-top: 10px !important;
 		border-color: black;
-		border-top: 1px;
-		border-top-style: solid;
+		border-bottom: 1px;
+		border-bottom-style: solid;
 	}
 	.produkt .h2{
 
@@ -133,8 +136,10 @@ height:80;
 	<script type="text/javascript">
 function toggle(el, svarId){
 	  var e = document.getElementById(svarId);
-	  console.log(el);
 	  var input=el.children[0];	
+	  console.log(e);
+	  console.log(el);
+	  console.log(input)
 
 		if(input.checked)
           		input.checked=false;
@@ -149,20 +154,44 @@ function toggle(el, svarId){
 
       
 
-
-      toggle2();
+console.log("hei");
+      skrurProduktPaa();
   }
-function toggle2(){
+function skrurProduktPaa()
+{
+	var a=0;
+	var i;
+	for(i=30;i<36;i++)
+	{
 
-	
+		i.toString();
+		var e = document.getElementById(i);
+		var go = document.getElementById("GO");
+		var input=e.children[0];	
+		 console.log(e);
+
+			
+
+	if(input.checked)
+	{
+			a=1;
+			console.log("yeah");
+	}
+	 console.log(a);
+		
+	}
+	if(a==1)
+	{
+		go.style.display = 'block';
+	}
+   else
+   {
+     	go.style.display = 'none';
+   }
+
+	}
 //lys opp hvis en av boksene som mathcer produkt er tent
-// Vippsgo=1,2,3,5,6,7,8,10
-// Vipps app 12
-//vipps faktura 9
-//vipps nettside 11
-
-	
-}
+// if Vippsgo=1,2,3,5,6,7,8,10
       
 
 	</script>
@@ -170,39 +199,39 @@ function toggle2(){
 <body>
 	<div>
 		<div class="spm">
-			<h2> Fortell litt om din bedrift </h2>
+			<h2 style="margin-left: 0"> Fortell litt om din bedrift </h2>
 			<h5> </h5>
-			<div  onclick="toggle(this,'1');">
+			<div id="30" onclick="toggle(this,'1');">
 				<input type="checkbox">
 					1 Vi selger mer enn ett produkt
 					<br>
 			</div>
-			<div onclick="toggle(this,'2');">
+			<div id="31" onclick="toggle(this,'2');">
 					<input type="checkbox">
 					2 Vi selger mat
 			</div>
-			<div onclick="toggle(this,'3');">
+			<div id="32" onclick="toggle(this,'3');">
 				<input type="checkbox">
 					3 Vi har take away eller forhåndsbestilling
 					<br>
 			</div>
 	
-			<div onclick="toggle(this,'5');">
+			<div id="33" onclick="toggle(this,'5');">
 				<input type="checkbox">
 					5 Vi selger billetter 
 					<br> 
 			</div>
-			<div onclick="toggle(this,'6');">
+			<div id="34" onclick="toggle(this,'6');">
 				<input type="checkbox">
 					6 Vi bruker kundeinfo i bestilling( Navn, Telefonnr, Adresse, Reg. nummer el.)
 					<br>
 			</div>
-			<div onclick="toggle(this,'7');">
+			<div id="35" onclick="toggle(this,'7');">
 				<input type="checkbox">
 					7 Vi har et kassesystem
 					<br>
 			</div>
-			<div onclick="toggle(this,'8');">
+			<div id="36" onclick="toggle(this,'8');">
 				<input type="checkbox">
 					8 Vi har bonusordning ( Klippekort eller 2for1 el.)
 					<br>
@@ -213,7 +242,7 @@ function toggle2(){
 					9 Vi sender ut faktura
 					<br>
 			</div>
-			<div onclick="toggle(this,'10');">
+			<div id="36" onclick="toggle(this,'10');">
 				<input type="checkbox">
 					10 Vi tar imot donasjoner
 					<br>
@@ -234,17 +263,17 @@ function toggle2(){
 
 		<div class="svar">
 			<h2> Passende løsninger:</h2>
-		<div class="produkt"  id="GO">
+		<div class="produkt"  id="GO" style="display:none">
 				<h3> VippsGo <a style="float: right; padding: 12px !important" class="button primary hollow" href="https://www.vipps.no/bedrift/vippsgo"> Les mer</a> <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsGo/"> Bestill </a> 
 				</h3>
 			</div>
 			<div class="svaret"  id="1" style="display: none">
 				<h4>Få en digital meny i Vipps</h4> 
-				- Vis frem din bedrifts utvalg for 2,8 millioner Vippsere
+				- Vis frem din bedrifts utvalg for 2,8 millioner Vippsere<br>
 				- Få anvendlige salgsrapporter <br>
 				/BILDE
-				<div type="checkbox" onclick="toggle(this,'20');">
-					<input class="Vis_mer" type="checkbox"> Vis mer
+				<div   onclick="toggle(this,'20');">
+					<input class="Vis_mer" type="checkbox" > Vis mer
 				</div>
 				
 				<div class="svarutv"  id="20" style="display: none">
@@ -255,7 +284,7 @@ function toggle2(){
 			<div class="svaret" id="2" style="display: none">
 				<h4 class "overskrift">Matsalg</h4>
 				Senk presset på servitører og øk salget: La kundene bestille og betale mat og drikke i Vipps. Her kan de både oppgi allergener og gi tips!
-				<div type="checkbox" onclick="toggle(this,'21');">
+				<div  onclick="toggle(this,'21');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
 				
@@ -268,7 +297,7 @@ function toggle2(){
 			<div class="svaret" id="3" style="display: none">
 				<h4 class "overskrift">Null kø og take away!</h4>
 				Slipp telefonkø for bestilling: Kundene bestiller og betaler i Vipps og henter etter en leveringstid satt av dere. Vipps så har dere Take Away!
-<div type="checkbox" onclick="toggle(this,'22');">
+<div type="" onclick="toggle(this,'22');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
 				
@@ -284,7 +313,7 @@ Man kan enkelt legge til et alternativ om levering, med en selvbestemt leverings
 			<div class="svaret" id="5" style="display: none">
 				<h4> Billettsalg</h4>
 				Enkel og billig håndtering av billettsalg, for store og små arrangement. Kundene finner og betaler for billettene i Vipps, fra et utvalg du setter opp i en fei. 
-<div type="checkbox" onclick="toggle(this,'23');">
+<div type="" onclick="toggle(this,'23');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
 				
@@ -299,24 +328,24 @@ Man kan enkelt legge til et alternativ om levering, med en selvbestemt leverings
 				<h4>Kundeinformasjon</h4>
 				I hver bestilling kan man be om informasjon om kunden <br>
 				Navn, adresse og epost er standard.<br> 
-<div type="checkbox" onclick="toggle(this,'24');">
+			<div type="" onclick="toggle(this,'24');">
 					<input class="Vis mer" type="checkbox"> Vis mer
 				</div>
 				
 				<div class="svarutv"  id="24" style="display: none">
-Man kan også definer feltet selv og be om spesifikk date, som medlemsnummer, reg. nummer eller favorittfarge! 
+				Man kan også definer feltet selv og be om spesifikk date, som medlemsnummer, reg. nummer eller favorittfarge! 
 				</div>
 
 
 			</div>
 			<div class="svaret" id="7" style="display: none">
 				<h4> Kasseintegrering</h4> VippsGo har ferdige integrasjoner med: PC Kasse, SMS, RetailPOS og KDR; slik at alt blir avstemt og samlet på ett sted med kun én salgsrapport.
-<div type="checkbox" onclick="toggle(this,'25');">
+				<div type="" onclick="toggle(this,'25');">
 					<input class="Vis mer" type="checkbox"> Vis mer
 				</div>
 				
 				<div class="svarutv"  id="25" style="display: none">
-I tillegg kan du definere rettighetsnivå i appen til ulike ansatte, slik du er vant til fra kassen.
+				I tillegg kan du definere rettighetsnivå i appen til ulike ansatte, slik du er vant til fra kassen.
 
 				</div>
 
@@ -326,7 +355,7 @@ I tillegg kan du definere rettighetsnivå i appen til ulike ansatte, slik du er 
 			</div>
 			<div class="svaret"  id="10" style="display: none">
 				<h4>Donasjon: Giverpakker og skatterapport</h4> Tilby en meny av ulike givermuligheter og ha åpent for valgfritt beløp, enkelt satt opp og synlig for alle med Vipps<br> Når donasjonene er samlet stiller vi med ferdig skatterapport!<br>
-<div type="checkbox" onclick="toggle(this,'26');">
+<div type="" onclick="toggle(this,'26');">
 					<input class="Vis mer" type="checkbox"> Vis mer
 				</div>
 				
@@ -350,7 +379,7 @@ For å holde kontakten, kan man også be om givers navn og kontaktinformasjon n�
 				<h4>Vippsutsjekk i din nettbutikk</h4>
 					Vipps på nett gjør betaling superenkelt ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare ett mobilnummer. <br>
 					Vi henter ut leveringsinfo, så alt kunden trenger er å bekreftet kjøpet.
-				<div type="checkbox" onclick="toggle(this,'27');">
+				<div type="" onclick="toggle(this,'27');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
 				
