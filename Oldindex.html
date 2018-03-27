@@ -46,7 +46,6 @@ p{
 		opacity: 0;
 		margin:0;
 		padding:0 !important;
-		margin-bottom: 0px;
 
 	}
 /*	.spm div{
@@ -85,10 +84,6 @@ p{
 
 	}
 
-.checkbox{
-	margin:0;
-}
-
 	.svaret{
 		
 	}
@@ -96,8 +91,8 @@ p{
 		background-color:white !important;
 		margin-top: 10px !important;
 		border-color: black;
-		border-top: 1px;
-		border-top-style: solid;
+		border-bottom: 1px;
+		border-bottom-style: solid;
 	}
 	.produkt .h2{
 
@@ -183,7 +178,7 @@ function toggle2(){
 			</div>
 			<div onclick="toggle(this,'3');">
 				<input type="checkbox">
-					3 Vi har take away eller forhåndsbestilling
+					3 Vi har Take away eller forhåndsbestilling
 					<br>
 			</div>
 	
@@ -233,9 +228,9 @@ function toggle2(){
 	</div>
 
 		<div class="svar">
-			<h2> Passende løsninger:</h2>
+			<h2> Dine fordeler:</h2>
 		<div class="produkt"  id="GO">
-				<h3> VippsGo <a style="float: right; padding: 12px !important" class="button primary hollow" href="https://www.vipps.no/bedrift/vippsgo"> Les mer</a> <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsGo/"> Bestill VippsGo</a> 
+				<h3> VippsGo <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsGo/"> Bestill VippsGo</a> 
 				</h3>
 			</div>
 			<div class="svaret"  id="1" style="display: none">
@@ -266,8 +261,8 @@ function toggle2(){
 				
 			</div>
 			<div class="svaret" id="3" style="display: none">
-				<h4 class "overskrift">Null kø og take away!</h4>
-				Slipp telefonkø for bestilling: Kundene bestiller og betaler i Vipps og henter etter en leveringstid satt av dere. Vipps så har dere Take Away!
+				<h4 class "overskrift">Forhåndsbestilling og Take away</h4>
+				Slipp telefonkø for bestilling: Kundene bestiller og betaler i Vipps og henter etter en leveringstid satt av dere. <br> Vipps så har dere Take Away!
 <div type="checkbox" onclick="toggle(this,'22');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
@@ -289,8 +284,8 @@ Man kan enkelt legge til et alternativ om levering, med en selvbestemt leverings
 				</div>
 				
 				<div class="svarutv"  id="23" style="display: none">
-					Dere godkjenner en brukt billett med å taste en selvvalgt kode i kundens Vipps.
-					Man kan også legge til flere bruk i en billett, som et klippekort for flere turer.
+Dere godkjenner en brukt billett med å taste en selvvalgt kode i kundens Vipps.
+Man kan også legge til flere bruk i en billett, som et klippekort for flere turer.
 				</div>
 
 							</div>
@@ -338,8 +333,7 @@ For å holde kontakten, kan man også be om givers navn og kontaktinformasjon n�
 				</div>
 
 			<div  id="11" style="display: none">
-				<h3>Vipps på nett <a style="float: right; padding: 12px !important" class="button primary hollow" href="https://www.vipps.no/bedrift/vipps-pa-nett"> Les mer</a><a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippspanett/"> Bestill Vipps på Nett</a> </h3>
-
+				<h3>Vipps på nett <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippspanett/"> Bestill Vipps på Nett</a> </h3>
 					<div class="svaret"  id="11" style="display: none">
 				<div class="produkt" id="paNett">
 				<h3>Vipps på nett <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippspanett/"> Bestill Vipps på Nett</a> </h3>
@@ -347,11 +341,11 @@ For å holde kontakten, kan man også be om givers navn og kontaktinformasjon n�
 			</div>
 
 		
-				<h4>Vippsutsjekk i din nettbutikk</h4>
-					Vipps på nett gjør betaling superenkelt ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare ett mobilnummer. <br>
-					Vi henter ut leveringsinfo, så alt kunden trenger er å bekreftet kjøpet.
+				<h4>Vipps utsjekk i Nettbutikk</h4>
+					Vipps på nett gjør betaling superenkelt ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare mobilnummer. <br>
+					Vi kan hente ut leveringsinfo, så alt kunden trenger bare å bekreftet kjøpet.
 				<div type="checkbox" onclick="toggle(this,'27');">
-					<input class="Vis_mer" type="checkbox"> Vis mer
+					<input class="Vis mer" type="checkbox"> Vis mer
 				</div>
 				
 				<div class="svarutv"  id="27" style="display: none">
@@ -359,28 +353,23 @@ For å holde kontakten, kan man også be om givers navn og kontaktinformasjon n�
 				</div>
 			</div>						 
 
-			<div class="produkt" id="12" style="display: none">
+			<div class="produkt" id="inAPP">
 				<h3>Vipps i App
 				<a class="button primary" style="float: right; padding: 12" href="https://vippsbedrift.no/signup/vippsiapp/"> Bestill Vipps i App</a></h3>
-				<div class="svaret"  id="12" >
-				<h4>Enklere blir det ikke</h4>
-				Vipps i App gjør betaling i din app superenkelt, ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare mobilnummer.
-				</div>
 			</div>
 			
 			 
-			
-
-	<div  id="9" style="display: none;">
-		<div class="produkt">
-				<h3>Vipps Faktura <a style="float: right; padding: 12px !important" class="button primary hollow" href="https://www.vipps.no/bedrift/vipps-faktura"> Les mer</a><a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsfaktura"> Bestill Vipps Faktura</a> </h3>
+			<div class="svaret"  id="12" style="display: none">
+				Vipps i App gjør betaling i din app superenkelt, ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare mobilnummer.
 			</div>
-				<div class="svaret" id="9">
+
+	<div class="produkt" id="Faktura">
+				<h3>Vipps Faktura <a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsfaktura"> Bestill Vipps Faktura</a> </h3>
+			</div>
+			<div class="svaret" id="9" style="display: none">
 				<h4>Send regninger ut i Vipps</h4>Lar deg sende faktura rett i Vipps til kundene <br>
 				Gjør opplevelsen av faktura kjappere og bedre!
 			</div>
-			</div>
-			
 
 			
 
