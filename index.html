@@ -36,6 +36,7 @@ h3 a{
 h4{
 	font-weight: bold;
 	opacity: 1 !important;
+	margin-bottom: 7px !important;
 }
 p{
 	margin-bottom: 0px;
@@ -52,7 +53,8 @@ p{
 		padding-bottom:5px;
 		margin-left: 10px;
 		opacity: 0.75;
-	}
+
+		}
 	.spm div:hover
 	{
 		background-color:#FAE7D6;
@@ -66,6 +68,16 @@ p{
 	.spmene
 	{
 		padding-top:5px;
+
+		border:1px;
+		border-color: #F38100;
+		border-style: solid;
+		border-radius: 3px;
+		cursor: pointer;
+		padding-bottom:5px;
+		margin-top:5px;
+		margin-bottom: 5px;
+		
 	}
 	.Vis_mer{
 		opacity: 0;
@@ -106,11 +118,13 @@ p{
 	}
 
 
-.checkbox{
+.checkbox
+{
 	margin:0;
 }
 
-	.svaret{
+	.svaret
+	{
 		display: none; 
 		opacity: 0.75;
 	}
@@ -120,7 +134,24 @@ p{
 		border-color: black;
 		border-bottom: 1px;
 		border-bottom-style: solid;
+		overflow: hidden;
 	}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky 
+{
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/*.sticky + .content  KAN BRUKES TIL Å FÅ SMUDERE SCROLL
+{
+  padding-top: 60px;
+} */
+
+
 	.produkt h3{
 
 	}
@@ -206,6 +237,31 @@ function skrurProduktPaa()
 
  }
 
+// STICKY PRODUKT!
+
+
+ // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("GO");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) 
+  {
+    navbar.classList.add("sticky")
+    console.log(navbar +"stikky");
+  } else 
+  {
+  	console.log(navbar +"ikke stikky")
+    navbar.classList.remove("sticky");
+  }
+}
+
 
 	</script>
 </head>
@@ -264,12 +320,12 @@ function skrurProduktPaa()
 							
 			<div  class="spmene" id="40" onclick="toggle(this,'11');">
 				<input type="checkbox">
-					11 Har eller vil ha betaling i nettside
+					11 Vi har nettside
 					<br>
 				</div>
 				<div class="spmene" id="41" onclick="toggle(this,'12');">
 				<input type="checkbox">
-					12 Har eller vil ha betaling i app
+					12 Vi har app
 					<br>
 				</div>
 		</div>
@@ -289,24 +345,24 @@ function skrurProduktPaa()
 					
 				<h4>Få din meny i Vipps</h4> 
 				<img style="float:right;" class="img" src="Meny.jpeg" >
-				- Vis frem din bedrifts utvalg for 2,8 millioner Vippsere<br>
-				- Få anvendlige salgsrapporter <br>
+				Vis frem ditt utvalg for 2,8 millioner Vippsere<br>
+				og få enkle salgsrapporter <br>
 					
 				<div  style="float: clear" onclick="toggle(this,'20');">
 					<input class="Vis_mer" type="checkbox" > Vis mer
 				</div>
 				
 				<div class="svarutv"  id="20" style="display: none">
-				- Kunde kan legge til Ordrekommentar<br>
-				- Ha flere brukere med ulike rettigheter(feks: dagligleder, revisor og selger) <br>
+				Kundene kan legge til ordrekommentar<br>
+				Ha flere brukere med ulike rettigheter(feks: dagligleder, revisor og selger) <br>
 				</div>
 			</div>
 
 
 			<div class="svaret" id="2" style="display: none">
-				<h4 class "overskrift"> Bestill og betal i Vipps </h4>
+				<h4 class "overskrift"> Kunden bestiller og betaler i Vipps </h4>
 				<img  class="img" src="Meny.jpeg" >
-				Senk presset på servitører og øk salget: La kundene bestille og betale mat og drikke i Vipps. Her kan de både oppgi allergener og gi tips!
+				Senk presset på servitører og øk salget: La kundene bestille og betale mat og drikke i Vipps. De kan både oppgi allergener og gi tips!
 				<div  onclick="toggle(this,'21');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
@@ -335,7 +391,7 @@ function skrurProduktPaa()
 
 			</div>
 			<div class="svaret" id="5" style="display: none">
-				<h4> Billettsalg</h4>
+				<h4> Billett og beviser via Vipps</h4>
 				Enkel og billig håndtering av billettsalg, for store og små arrangement. Kundene finner og betaler for billettene i Vipps, fra et utvalg du setter opp i en fei. <br>
 				<img class="img" src="Billett.jpeg" >
 			<div type="" onclick="toggle(this,'23');">
