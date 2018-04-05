@@ -12,13 +12,15 @@
 	body{
 		box-sizing: border-box;
 		margin-left: 10px;
+		font-size:18px;
 		/*background-color: #ffd7b5;*/
 					}
-					h1{
-						margin-left: 20px;
-						margin-bottom: 6px;
-						opacity: 0.95;
-					}
+h1{
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 6px;
+	opacity: 0.85;
+}
 h2{
 	margin-top: 10px;
 	margin-left: 20px;
@@ -43,7 +45,7 @@ p{
 	margin-bottom: 0px;
 	margin: -5px;
 
-		opacity: 0.60;
+		opacity: 0.80;
 }
 
 	.spm
@@ -64,22 +66,21 @@ p{
 		border-style: solid;
 		border-radius: 3px;
 		cursor: pointer;
-		padding-bottom:5px;
 	}
 	.spmene
 	{
-		padding-top:5px;
+		padding-top:10px;
 
 		border:1px;
 		border-color: #F38100;
 		border-style: solid;
 		border-radius: 3px;
 		cursor: pointer;
-		padding-bottom:5px;
 		margin-top:5px;
 		margin-bottom: 5px;
 
 		font-size:18px;
+		padding-left: 10px;
 		
 	}
 	.Vis_mer{
@@ -176,19 +177,19 @@ p{
 	}
 
 	.img{
-width: 40;
-height:80;
-opacity: 1;
-float:right;
+		width: 40;
+		height:80;
+		opacity: 1;
+		float:right;
 	}
 
 	.img:hover{
-    color: #424242; 
-  opacity: 1;
-  position: absolute;
-  transform: scale(4);
-  -ms-transform: scale(4); /* IE 9 */
-  -webkit-transform: scale(4); /* Safari and Chrome */
+		    color: #424242; 
+		  opacity: 1;
+		  position: absolute;
+		  transform: scale(4);
+		  -ms-transform: scale(4); /* IE 9 */
+		  -webkit-transform: scale(4); /* Safari and Chrome */
 
 
 }
@@ -279,7 +280,7 @@ function myFunction() {
 </head>
 <body>
 	<div>
-		<h1 style="margin-left:30px"> Finn din Vipps</h1>
+		<h1 > Finn din Vipps</h1>
 		<div class="spm">
 			<h2 > Fortell litt om din bedrift </h2>
 			<h5> </h5>
@@ -305,7 +306,7 @@ function myFunction() {
 			</div>
 			<div class="spmene" id="34" onclick="toggle(this,'6');">
 				<input type="checkbox">
-					Vi bruker kundeinfo i bestilling (Navn, Telefonnr, Adresse, Reg. nummer el.)
+					Vi bruker kundeinfo i bestilling (Eks: Adresse)
 					<br>
 			</div>
 			<div class="spmene" id="35" onclick="toggle(this,'7');">
@@ -315,7 +316,7 @@ function myFunction() {
 			</div>
 			<div class="spmene" id="36" onclick="toggle(this,'8');">
 				<input type="checkbox">
-					Vi har bonusordning ( Klippekort eller 2for1 el.)
+					Vi har bonusordning (Eks: Klippekort eller 2for1)
 					<br>
 			</div>
 			
@@ -432,13 +433,15 @@ function myFunction() {
 
 			</div>
 			<div class="svaret" id="7" style="display: none">
-				<h4> Kasseintegrering</h4> VippsGo har ferdige integrasjoner med: PC Kasse, SMS, RetailPOS og KDR; slik at alt blir avstemt og samlet på ett sted med kun én salgsrapport.
+				<h4> Vipps + ditt kassesytem = sant</h4> VippsGo har ferdige integrasjoner med flere kassesystem, slik at alt blir avstemt og samlet på ett sted med kun én salgsrapport.
 				<div type="" onclick="toggle(this,'25');">
 					<input class="Vis mer" type="checkbox"> Vis mer
 				</div>
 				
 				<div class="svarutv"  id="25" style="display: none">
-				I tillegg kan du definere rettighetsnivå i appen til ulike ansatte, slik du er vant til fra kassen.
+				Du kan enkelt definere tilgangsnivå i appen til ulike ansatte, slik du er vant til fra kassen.
+				<br>
+				Kassapartnere: PC Kasse, SMS, RetailPOS og KDR
 
 				</div>
 
@@ -522,10 +525,10 @@ function myFunction() {
 						<a style="float: right; padding: 12" class="button primary" href="https://vippsbedrift.no/signup/vippsfaktura"> Bestill
 						</a> 
 					</h3>
-				
+				</div>
 					<div>
 						<h4>
-							La kunder betale dine faktura i Vipps
+							Send faktura til kundens Vipps
 						</h4>
 						Lar deg sende faktura rett i Vipps til kundene <br>
 						Gjør opplevelsen av faktura kjappere og bedre!
@@ -535,5 +538,4 @@ function myFunction() {
 			</div>
 
 		</div>
-	</div>
 </body>
