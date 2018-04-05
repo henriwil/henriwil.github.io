@@ -26,7 +26,8 @@ h2{
 h3{
 	color:#6656AF;
 	font-weight: bold;
-	margin-bottom: 40px !important;
+	margin-bottom: 20px !important;
+	font-size: 28;
 }
 h3 a{
 	font-weight: normal;
@@ -77,6 +78,8 @@ p{
 		padding-bottom:5px;
 		margin-top:5px;
 		margin-bottom: 5px;
+
+		font-size:18px;
 		
 	}
 	.Vis_mer{
@@ -112,9 +115,17 @@ p{
 	.svar div{
 		
 		background-color: white;
-				padding: 10px;
+				padding-bottom: 10px !important;
 				align-items: center;
+				padding-left: 10px;
+				padding-right: 10px;
 
+	}
+
+	.innpakning
+	{
+		border-style: solid; border-width: 0.5px;border-left: 1px; border-right: 1px;
+		 padding-top: 10px; padding-bottom: 20px;
 	}
 
 
@@ -131,10 +142,11 @@ p{
 	.produkt{
 		background-color:white !important;
 		margin-top: 10px !important;
-		border-color: black;
+		/*border-color: black;
 		border-bottom: 1px;
-		border-bottom-style: solid;
+		border-bottom-style: solid;*/
 		overflow: hidden;
+		padding-bottom: 0px !important;
 	}
 
 
@@ -156,11 +168,11 @@ p{
 
 	}
 	.produkt div{
-		float: right; padding: 12" class="button primary
+		float: right; padding: 12px;
 	}
 
 	.produkt a{
-		float: right; padding: 12px !important;
+		float: right; padding: 13px !important;
 	}
 
 	.img{
@@ -200,15 +212,12 @@ float:right;
        else
           e.style.display = 'block';
 
-
-      
-
-	console.log("hei");
       skrurProduktPaa();
   }
 function skrurProduktPaa()
 {
 	var a=0;
+	var innpakning;
 	var i;
 	for(i=30;i<38;i++)
 	{
@@ -221,17 +230,20 @@ function skrurProduktPaa()
 		if(input.checked)
 		{
 				a=1;
-				console.log("yeah");
 		}
 			
 	}
 		if(a==1)
 		{
 			go.style.display = 'block';
+			innpakning= go.parentElement;
+			innpakning.style.display = 'block';
 		}
 	   else
 	   {
 	     	go.style.display = 'none';
+	     	innpakning= go.parentElement;
+			innpakning.style.display = 'none';
 	   }
 
 
@@ -267,73 +279,74 @@ function myFunction() {
 </head>
 <body>
 	<div>
-		<h1> Finn din Vipps</h1>
+		<h1 style="margin-left:30px"> Finn din Vipps</h1>
 		<div class="spm">
 			<h2 > Fortell litt om din bedrift </h2>
 			<h5> </h5>
 			<div class="spmene" id="30" onclick="toggle(this,'1');">
 				<input type="checkbox">
-					1 Vi selger mer enn ett produkt
+					Vi selger mer enn ett produkt
 					<br>
 			</div>
 			<div class="spmene" id="31" onclick="toggle(this,'2');">
 					<input type="checkbox">
-					2 Vi selger mat
+					Vi selger mat
 			</div>
 			<div class="spmene" id="32" onclick="toggle(this,'3');">
 				<input type="checkbox">
-					3 Vi har take away eller forhåndsbestilling
+					Vi har take away eller forhåndsbestilling
 					<br>
 			</div>
 	
 			<div class="spmene" id="33" onclick="toggle(this,'5');">
 				<input type="checkbox">
-					5 Vi selger billetter 
+					Vi selger billetter eller bevis
 					<br> 
 			</div>
 			<div class="spmene" id="34" onclick="toggle(this,'6');">
 				<input type="checkbox">
-					6 Vi bruker kundeinfo i bestilling( Navn, Telefonnr, Adresse, Reg. nummer el.)
+					Vi bruker kundeinfo i bestilling (Navn, Telefonnr, Adresse, Reg. nummer el.)
 					<br>
 			</div>
 			<div class="spmene" id="35" onclick="toggle(this,'7');">
 				<input type="checkbox">
-					7 Vi har et kassesystem
+					Vi har et kassesystem
 					<br>
 			</div>
 			<div class="spmene" id="36" onclick="toggle(this,'8');">
 				<input type="checkbox">
-					8 Vi har bonusordning ( Klippekort eller 2for1 el.)
+					Vi har bonusordning ( Klippekort eller 2for1 el.)
 					<br>
 			</div>
 			
 			<div class="spmene" id="39" onclick="toggle(this,'9');">
 				<input type="checkbox">
-					9 Vi sender ut faktura
+					Vi sender ut faktura
 					<br>
 			</div>
 			<div class="spmene" id="37" onclick="toggle(this,'10');">
 				<input type="checkbox">
-					10 Vi tar imot donasjoner
+					Vi tar imot donasjoner
 					<br>
 			</div>
 							
 			<div  class="spmene" id="40" onclick="toggle(this,'11');">
 				<input type="checkbox">
-					11 Vi har nettside
+					Vi har nettside
 					<br>
 				</div>
 				<div class="spmene" id="41" onclick="toggle(this,'12');">
 				<input type="checkbox">
-					12 Vi har app
+					Vi har app
 					<br>
 				</div>
 		</div>
 
-	<div class="svar">
-			<h2 style="margin-left: 0px;opacity: 0.7"> Passende løsninger:</h2>
+	<div class="svar" style="margin-left:10px;">
+			<h2 style="margin-left: 20px;opacity: 0.7"> Hvordan vi kan hjelpe</h2>
+		<div class="innpakning" style="display:none;"">
 		<div class="produkt"  id="GO" style="display:none;margin-top: 0px !important">
-				<h3 style="float:left;margin-top: 10px !important;">
+				<h3 style="float:left;margin-top: 5px !important;">
 					VippsGo
 				</h3> 
 				<h3> 
@@ -375,7 +388,7 @@ function myFunction() {
 
 
 			<div class="svaret" id="3" style="display: none">
-				<h4 class "overskrift">Null kø og take away!</h4>
+				<h4 class "overskrift">Take away og null kø!</h4>
 				Slipp telefonkø for bestilling: Kundene bestiller og betaler i Vipps og henter etter en leveringstid satt av dere. Vipps så har dere Take Away!
 			<div type="" onclick="toggle(this,'22');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
@@ -391,23 +404,23 @@ function myFunction() {
 
 			</div>
 			<div class="svaret" id="5" style="display: none">
-				<h4> Billett og beviser via Vipps</h4>
-				Enkel og billig håndtering av billettsalg, for store og små arrangement. Kundene finner og betaler for billettene i Vipps, fra et utvalg du setter opp i en fei. <br>
-				<img class="img" src="Billett.jpeg" >
+
+				<img class="img" src="Billett.jpeg">
+					<h4>Dine billetter eller beviser i Vipps</h4>
+				Enkel og billig håndtering av billett for store og små arrangement, eller for transport. Kundene finner og betaler for billettene i Vipps, fra et utvalg du setter opp i en fei. Billettene godkjenner du i appen ved døra.
 			<div type="" onclick="toggle(this,'23');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
 				
 				<div class="svarutv"  id="23" style="display: none">
 					Dere godkjenner en brukt billett med å taste en selvvalgt kode i kundens Vipps.
-					Man kan også legge til flere bruk i en billett, som et klippekort for flere turer.
+					Man kan også legge til flere bruk i en billett, som et klippekort for tur/retur.
 				</div>
 				</div>
 
 			<div class="svaret" id="6" style="display: none">
-				<h4>Kundeinformasjon</h4>
-				I hver bestilling kan man be om informasjon om kunden <br>
-				Navn, adresse og epost er standard.<br> 
+				<h4>La kunden glemme adressen sin</h4>
+				Når kunden kjøper noe fra deg, så kan vi med kundens godkjenning, automatisk hente ut kundeinfo. Navn, adresse og epost er standard.<br> 
 			<div type="" onclick="toggle(this,'24');">
 					<input class="Vis mer" type="checkbox"> Vis mer
 				</div>
@@ -431,7 +444,7 @@ function myFunction() {
 
 			</div>
 			<div class="svaret" id="8" style="display: none">
-				<h4>Bonusordning</h4>Hver ting du selger fra menyen kan få et klippekort tilknyttet, som kun du kan krysse av! <br> Her kan man skape smarte kampanjer!
+				<h4>Skap appelerende kampanjer</h4>Hver ting du selger fra menyen kan få et klippekort tilknyttet, som kun du kan krysse av! <br> Her kan man skape smarte kampanjer!
 			</div>
 			<div class="svaret"  id="10" style="display: none">
 				<h4>Donasjon: Giverpakker og skatterapport</h4> Tilby en meny av ulike givermuligheter og ha åpent for valgfritt beløp, enkelt satt opp og synlig for alle med Vipps<br> Når donasjonene er samlet stiller vi med ferdig skatterapport!<br>
@@ -443,11 +456,11 @@ function myFunction() {
 						For å holde kontakten, kan man også be om givers navn og kontaktinformasjon når donasjonen utføres.  
 				</div>
 			</div>
-
+</div>
 <!--Vipps på nett-->
-			<div  id="11" style="display: none">
+			<div  id="11" class="innpakning" style="display: none">
 				<div class="produkt">
-					<h3 style="float:left;margin-top: 10px !important;"">
+					<h3 style="float:left;margin-top: 5px !important;"">
 						Vipps på nett 
 					</h3>
 					<h3>
@@ -458,26 +471,25 @@ function myFunction() {
 
 			<div >		
 				<h4>
-					Vippsutsjekk i din nettbutikk
+					Kunden slipper kortet i din nettbutikk
 				</h4>
-					Vipps på nett gjør betaling superenkelt ved å ta utsjekken gjennom Vipps på kundens telefon. Ingen kort, bare ett mobilnummer. <br>
-					Vi henter ut leveringsinfo, så alt kunden trenger er å bekreftet kjøpet.
+					Betaling blir superenkelt når utsjekken går i Vipps med bare ett mobilnummer, ingen kortinfo. <br>
+					Leveringsinfo blir hentet ut, så alt kunden trenger er å bekreftet kjøpet.<br>
 				<div type="" onclick="toggle(this,'27');">
 					<input class="Vis_mer" type="checkbox"> Vis mer
 				</div>
 				
 				<div class="svarutv"  id="27" style="display: none">
-					Med Vipps Hurtigkasse kan kunden også sjekke ut direkte fra et av dine produkter, med 5 klikk.
+					Kunden kan  sjekke ut direkte fra et av dine produkter i løpet av 5 klikk med Vipps hurtigkasse.
 				</div>
 			</div>
 			</div>		
 
 
-
 <!--Vipps i app-->
-			<div  id="12" style="display: none">
+			<div  id="12" class="innpakning" style="display: none">
 				<div class="produkt">
-					<h3 style="float:left;margin-top: 10px !important;">
+					<h3 style="float:left;margin-top: 5px !important;">
 						Vipps i app
 					</h3>
 					<h3>
@@ -499,8 +511,9 @@ function myFunction() {
 			 
 			
 <!--Faktura-->
-			<div class="produkt" id="9" style="display: none;">
-					<h3 style="float:left;margin-top: 10px !important;">
+			<div id="9" class="innpakning" style="display: none;">
+				<div class="produkt">
+					<h3 style="float:left;margin-top: 5px !important;">
 						Vipps Faktura 
 					</h3>
 					<h3>
@@ -510,13 +523,14 @@ function myFunction() {
 						</a> 
 					</h3>
 				
-					<div id="9" >
+					<div>
 						<h4>
 							La kunder betale dine faktura i Vipps
 						</h4>
 						Lar deg sende faktura rett i Vipps til kundene <br>
 						Gjør opplevelsen av faktura kjappere og bedre!
 					</div>
+				</div>
 				
 			</div>
 
