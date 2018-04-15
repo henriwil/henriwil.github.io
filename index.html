@@ -303,7 +303,7 @@
             display: none !important
         }
 
-        .grid-container {
+        .grid-spmene {
             padding-right: .625rem;
             padding-left: .625rem;
             max-width: 80rem;
@@ -311,13 +311,13 @@
         }
 
         @media print, screen and (min-width: 47.5em) {
-            .grid-container {
+            .grid-spmene {
                 padding-right: .9375rem;
                 padding-left: .9375rem
             }
         }
 
-        .grid-container.fluid {
+        .grid-spmene.fluid {
             padding-right: .625rem;
             padding-left: .625rem;
             max-width: 100%;
@@ -325,13 +325,13 @@
         }
 
         @media print, screen and (min-width: 47.5em) {
-            .grid-container.fluid {
+            .grid-spmene.fluid {
                 padding-right: .9375rem;
                 padding-left: .9375rem
             }
         }
 
-        .grid-container.full {
+        .grid-spmene.full {
             padding-right: 0;
             padding-left: 0;
             max-width: 100%;
@@ -924,13 +924,13 @@
             }
         }
 
-        .grid-container:not(.full) > .grid-padding-x {
+        .grid-spmene:not(.full) > .grid-padding-x {
             margin-right: -.625rem;
             margin-left: -.625rem
         }
 
         @media print, screen and (min-width: 47.5em) {
-            .grid-container:not(.full) > .grid-padding-x {
+            .grid-spmene:not(.full) > .grid-padding-x {
                 margin-right: -.9375rem;
                 margin-left: -.9375rem
             }
@@ -2821,13 +2821,13 @@
             height: 100%
         }
 
-        .cell-block-container {
+        .cell-block-spmene {
             display: flex;
             flex-direction: column;
             max-height: 100%
         }
 
-        .cell-block-container > .grid-x {
+        .cell-block-spmene > .grid-x {
             max-height: 100%;
             flex-wrap: nowrap
         }
@@ -2852,13 +2852,13 @@
                 -ms-overflow-stype: -ms-autohiding-scrollbar
             }
 
-            .medium-cell-block-container {
+            .medium-cell-block-spmene {
                 display: flex;
                 flex-direction: column;
                 max-height: 100%
             }
 
-            .medium-cell-block-container > .grid-x {
+            .medium-cell-block-spmene > .grid-x {
                 max-height: 100%;
                 flex-wrap: nowrap
             }
@@ -2892,13 +2892,13 @@
                 -ms-overflow-stype: -ms-autohiding-scrollbar
             }
 
-            .large-cell-block-container {
+            .large-cell-block-spmene {
                 display: flex;
                 flex-direction: column;
                 max-height: 100%
             }
 
-            .large-cell-block-container > .grid-x {
+            .large-cell-block-spmene > .grid-x {
                 max-height: 100%;
                 flex-wrap: nowrap
             }
@@ -2932,13 +2932,13 @@
                 -ms-overflow-stype: -ms-autohiding-scrollbar
             }
 
-            .xlarge-cell-block-container {
+            .xlarge-cell-block-spmene {
                 display: flex;
                 flex-direction: column;
                 max-height: 100%
             }
 
-            .xlarge-cell-block-container > .grid-x {
+            .xlarge-cell-block-spmene > .grid-x {
                 max-height: 100%;
                 flex-wrap: nowrap
             }
@@ -3520,7 +3520,7 @@
             }
         }
 
-        .flex-container {
+        .flex-spmene {
             display: flex
         }
 
@@ -3553,7 +3553,7 @@
         }
 
         @media print, screen and (min-width: 47.5em) {
-            .medium-flex-container {
+            .medium-flex-spmene {
                 display: flex
             }
 
@@ -3587,7 +3587,7 @@
         }
 
         @media print, screen and (min-width: 64em) {
-            .large-flex-container {
+            .large-flex-spmene {
                 display: flex
             }
 
@@ -3621,7 +3621,7 @@
         }
 
         @media screen and (min-width: 78.75em) {
-            .xlarge-flex-container {
+            .xlarge-flex-spmene {
                 display: flex
             }
 
@@ -5049,7 +5049,7 @@
             border-bottom: 1px solid #565858
         }
 
-        .sticky, .sticky-container {
+        .sticky, .sticky-spmene {
             position: relative
         }
 
@@ -5808,7 +5808,7 @@
             }
         }
 
-        .img-container {
+        .img-spmene {
             background-size: cover;
             min-height: 300px
         }
@@ -5897,47 +5897,47 @@
             cursor: pointer;
         */
 
-        .spmene {
-            padding-top: 10px;
-
-            border: 1px;
-            border-color: #F38100;
-            border-style: solid;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-top: 5px;
-            margin-bottom: 5px;
-
-            font-size: 18px;
-            padding-left: 10px;
-        }
         .spmene input {
 	    opacity: 0;
 	}	
 
-	.container {
+	.spmene {
     display: block;
     position: relative;
-    padding-left: 35px;
+   
     cursor: pointer;
+    font-size: 18px;
+    color:black;
+  
+    padding-top: 8px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    
+    margin-top: 8px;
+   
+
+     border-bottom: 1px;
+    border-color: #80808080;
+    border-bottom-style: solid;
+    border-radius: 3px;
 
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none;      
 }
-.container input {
+.spmene input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
 
-.container:hover input ~ .checkmark {
+.spmene:hover input ~ .checkmark {
    background-color: #837bad;
 }
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.spmene input:checked ~ .checkmark {
     background-color: #6656AF;
 }
 .checkmark:after {
@@ -5945,10 +5945,10 @@
     position: absolute;
     display: none;
 }
-.container input:checked ~ .checkmark:after {
+.spmene input:checked ~ .checkmark:after {
     display: block;
 }
-.container .checkmark:after {
+.spmene .checkmark:after {
     left: 6px;
     top: 3px;
     width: 9px;
@@ -5962,23 +5962,15 @@
 
                .checkbox
                {
-            margin: 0;
+                
 			  display: block;
 			  position: relative;
 			  padding-left: 2.05rem;
-			  padding-top: 0.25rem;
+			  padding-top: 0.25rem !important;
 			  cursor: pointer;
 			  user-select: none;
 			  margin-bottom: 1rem;
 			}
-
-		  
-		  .checkmark_checked
-		  {
-		  	 background-size: auto;
-			    background: no-repeat center;
-			    background-size: 1.125rem;
-		  }
 
 
         .Vis_mer {
@@ -6078,7 +6070,8 @@
         function toggle(el, svarId) {
             var e = document.getElementById(svarId);
             var input = el.children[0];
-            console.log("sann");
+            console.log(el);
+
            
             if (input.checked)
             {
@@ -6133,8 +6126,13 @@
 
         }
 
-		window.onload = function() {cssEngine(rule) };
 
+
+
+
+
+    
+		window.onload = function() {cssEngine(rule) };
         function cssEngine(rule) 
         {
 			  var css = document.createElement('style'); // Creates <style></style>
@@ -6148,12 +6146,14 @@
 			var rule  = '.red {background-color: red}';
 			    rule += '.blue {background-color: blue}';
 			    rule += '.produkt a {float: right;padding: 13px !important;}'
-			    rule +='.checkmark { top: 0; left: 0; position: absolute; height: 25px!important; width: 25px !important; padding-left:8px; padding-right: 8px; background-size: 0 0; border-radius: 0.3125rem; background-color: white; border: 0.125rem solid #6656AF; }'
+			    rule +='.checkmark { margin-top: 8px; top: 0; left: 0; position: absolute; height: 25px!important; width: 25px !important; padding-left:8px; padding-right: 8px; background-size: 0 0; border-radius: 0.3125rem; background-color: white; border: 0.125rem solid #6656AF; }'
 			    rule += ' .spm { float: left; margin-right: 10px; padding-bottom: 5px; margin-left: 10px; opacity: 0.75; }.innpakning { border-style: solid; border-width: 0.5px; border-left: 1px; border-right: 1px; padding-top: 10px; padding-bottom: 20px; } .svaret { display: none; opacity: 1; }'
 			    rule +=' /*# sourceMappingURL=style.css.map*/ body { box-sizing: border-box; margin-left: 10px; font-size: 18px; /*background-color: #ffd7b5;*/ } h1 { margin-top: 10px; margin-left: 20px; margin-bottom: 6px; opacity: 0.85; } h2 { margin-top: 10px; margin-left: 20px; } h3 { color: #6656AF; font-weight: bold; margin-bottom: 20px !important; font-size: 27; } h3 a { font-weight: normal; } h4 { font-weight: bold; opacity: 1 !important; margin-bottom: 7px !important; } p { margin-bottom: 0px; margin: -5px; opacity: 0.80; }'
 
 			// Load the rules and execute after the DOM loads
 			
+            
+
 
         // STICKY PRODUKT!
 
@@ -6186,7 +6186,7 @@
 </head>
 <body>
 
-<h1> Finn din Vipps</h1>
+<h1> Hvordan kan Vipps hjelpe din bedrift?</h1>
 <div>
 
     <div class="row">
@@ -6194,68 +6194,85 @@
             <div class="spm">
                 <h2> Fortell litt om din bedrift </h2>
                 <h5></h5>
-                <div  >
-                   <label class="container" id="30" onclick="toggle(this,'1');" >
+               
+                   <label class="spmene" id="30" onclick="toggle(this,'1');" >
                    	Vi selger en vare, produkt eller tjeneste
   							<input type="checkbox">
-  							<span class="checkmark"></span>
+  							<span class="checkmark"/>
 					</label>
-                    
-                     
-                    <br>
                   
+               
+                <div  >
+                    <label class="spmene" id="31" onclick="toggle(this,'2');" >
+                                        Vi selger mat
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
-                <div class="spmene" id="31" onclick="toggle(this,'2');">
-                    <input type="checkbox">
-                    Vi selger mat
-                </div>
-                <div class="spmene" id="32" onclick="toggle(this,'3');">
-                    <input type="checkbox">
-                    Vi har take away eller forhåndsbestilling
-                    <br>
+                <div >
+                     <label class="spmene" id="32" onclick="toggle(this,'3');">
+                                        Vi har take away eller forhåndsbestilling
+
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
 
-                <div class="spmene" id="33" onclick="toggle(this,'5');">
-                    <input type="checkbox">
-                    Vi selger billetter eller bevis
-                    <br>
+                <div >
+                    <label class="spmene" id="33" onclick="toggle(this,'5');">
+                                         Vi selger billetter eller bevis
+
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
-                <div class="spmene" id="34" onclick="toggle(this,'6');">
-                    <input type="checkbox">
-                    Vi bruker kundeinfo i bestilling (Eks: Adresse)
-                    <br>
+                <div >
+                  <label class="spmene" id="34" onclick="toggle(this,'6');">
+                                         Vi bruker kundeinfo i bestilling (Eks: Adresse)
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
-                <div class="spmene" id="35" onclick="toggle(this,'7');">
-                    <input type="checkbox">
-                    Vi har et kassesystem
-                    <br>
+                <div >
+                    <label class="spmene" id="35" onclick="toggle(this,'7');">
+                                          Vi har et kassesystem
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
-                <div class="spmene" id="36" onclick="toggle(this,'8');">
-                    <input type="checkbox">
-                    Vi har bonusordning (Eks: Klippekort eller 2for1)
-                    <br>
+                     <label class="spmene" id="36" onclick="toggle(this,'8');">
+                                         Vi har bonusordninger (Eks: Klippekort eller 2for1)
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
+                <div >
+                 <label class="spmene" id="39" onclick="toggle(this,'9');">
+                                        Vi sender ut regninger
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
+                </div>
+                <div >
+                   <label class="spmene" id="37" onclick="toggle(this,'10');">
+                                        Vi tar imot donasjoner
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
 
-                <div class="spmene" id="39" onclick="toggle(this,'9');">
-                    <input type="checkbox">
-                    Vi sender ut regninger
-                    <br>
+                <div >
+                    <label class="spmene" id="40" onclick="toggle(this,'11');">
+                                        Vi har en nettside
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
-                <div class="spmene" id="37" onclick="toggle(this,'10');">
-                    <input type="checkbox">
-                    Vi tar imot donasjoner
-                    <br>
-                </div>
-
-                <div class="spmene" id="40" onclick="toggle(this,'11');">
-                    <input type="checkbox">
-                    Vi har en nettside
-                    <br>
-                </div>
-                <div class="spmene" id="41" onclick="toggle(this,'12');">
-                    <input type="checkbox">
-                    Vi har en app
-                    <br>
+                <div >
+                   <label class="spmene" id="41" onclick="toggle(this,'12');">
+                                        Vi har en mobil-app
+                            <input type="checkbox">
+                            <span class="checkmark"/>
+                    </label>
                 </div>
                 <div>
                     <a target="_blank" style="margin-top: 10px;padding: 5px !important"
@@ -6268,7 +6285,7 @@
 
 
         <div class="svar" style="margin-left:10px;">
-            <h2 style="margin-left: 20px;opacity: 0.7"> Hvordan vi kan hjelpe</h2>
+            <h2 style="margin-left: 20px;opacity: 0.7"> Produkter som kan passe</h2>
             <div class="innpakning" style="display:none;"
             ">
             <div class="produkt" id="GO" style="display:none;margin-top: 0px !important">
