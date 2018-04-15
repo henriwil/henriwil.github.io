@@ -5888,184 +5888,7 @@
 
        
 
-        /*.spm div:hover {
-            background-color: #FAE7D6;
-            border: 1px;
-            border-color: #F38100;
-            border-style: solid;
-            border-radius: 3px;
-            cursor: pointer;
-        */
 
-        .spmene {
-            padding-top: 10px;
-
-            border: 1px;
-            border-color: #F38100;
-            border-style: solid;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-top: 5px;
-            margin-bottom: 5px;
-
-            font-size: 18px;
-            padding-left: 10px;
-        }
-        .spmene input {
-	    opacity: 0;
-	}	
-
-	.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-
-.container:hover input ~ .checkmark {
-   background-color: #837bad;
-}
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-    background-color: #6656AF;
-}
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-.container .checkmark:after {
-    left: 6px;
-    top: 3px;
-    width: 9px;
-    height: 12px;
-    border: solid white;
-    border-width: 0 4px 4px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-               .checkbox
-               {
-            margin: 0;
-			  display: block;
-			  position: relative;
-			  padding-left: 2.05rem;
-			  padding-top: 0.25rem;
-			  cursor: pointer;
-			  user-select: none;
-			  margin-bottom: 1rem;
-			}
-
-		  
-		  .checkmark_checked
-		  {
-		  	 background-size: auto;
-			    background: no-repeat center;
-			    background-size: 1.125rem;
-		  }
-
-
-        .Vis_mer {
-            opacity: 0;
-            margin: 0;
-            padding: 0 !important;
-            margin-bottom: 0px;
-            margin: 0px !important;
-            cursor: pointer;
-        }
-        .vis_mer input 
-				  {
-				    position: absolute;
-				    opacity: 0;
-				  }
-
-        /*	.spm div{
-		margin-bottom:10px;		
-		background-color: #FEF9F5;
-		padding: 10px;
-		border:1px;
-		border-color: #F38100;
-		border-style: solid;
-		border-radius: 3px;
-		font: sans-serif;
-		border-radius: 2px;
-  height: 50px;
-
-	}*/
-
-        .svar {
-            float: left;
-            width: 450;
-
-        }
-
-        .svar div {
-
-            background-color: white;
-            padding-bottom: 10px !important;
-            align-items: center;
-            padding-left: 10px;
-            padding-right: 10px;
-
-        }
-
-        
-
-        .produkt {
-            background-color: white !important;
-            margin-top: 10px !important;
-            /*border-color: black;
-		border-bottom: 1px;
-		border-bottom-style: solid;*/
-            overflow: hidden;
-            padding-bottom: 0px !important;
-        }
-
-  
-        .produkt div {
-            float: right;
-            padding: 12px;
-        }
-
-        
-
-        .img {
-            width: 40;
-            height: 80;
-            opacity: 1 !important;
-            float: right;
-        }
-
-        .img:hover {
-            color: #424242;
-            opacity: 1 !important;
-            transform: scale(5);
-            -ms-transform: scale(5); /* IE 9 */
-            -webkit-transform: scale(5); /* Safari and Chrome */
-        }
-
-      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%
-        }
 
         /*.sticky + .content  KAN BRUKES TIL Å FÅ SMUDERE SCROLL
 {
@@ -6074,7 +5897,12 @@
         
     </style>
 
-    <script type="text/javascript">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	 <script type="text/javascript">
         function toggle(el, svarId) {
             var e = document.getElementById(svarId);
             var input = el.children[0];
@@ -6151,6 +5979,7 @@
 			    rule +='.checkmark { top: 0; left: 0; position: absolute; height: 25px!important; width: 25px !important; padding-left:8px; padding-right: 8px; background-size: 0 0; border-radius: 0.3125rem; background-color: white; border: 0.125rem solid #6656AF; }'
 			    rule += ' .spm { float: left; margin-right: 10px; padding-bottom: 5px; margin-left: 10px; opacity: 0.75; }.innpakning { border-style: solid; border-width: 0.5px; border-left: 1px; border-right: 1px; padding-top: 10px; padding-bottom: 20px; } .svaret { display: none; opacity: 1; }'
 			    rule +=' /*# sourceMappingURL=style.css.map*/ body { box-sizing: border-box; margin-left: 10px; font-size: 18px; /*background-color: #ffd7b5;*/ } h1 { margin-top: 10px; margin-left: 20px; margin-bottom: 6px; opacity: 0.85; } h2 { margin-top: 10px; margin-left: 20px; } h3 { color: #6656AF; font-weight: bold; margin-bottom: 20px !important; font-size: 27; } h3 a { font-weight: normal; } h4 { font-weight: bold; opacity: 1 !important; margin-bottom: 7px !important; } p { margin-bottom: 0px; margin: -5px; opacity: 0.80; }'
+			    rule +=' /*.spm div:hover { background-color: #FAE7D6; border: 1px; border-color: #F38100; border-style: solid; border-radius: 3px; cursor: pointer; */ .spmene { padding-top: 10px; border: 1px; border-color: #F38100; border-style: solid; border-radius: 3px; cursor: pointer; margin-top: 5px; margin-bottom: 5px; font-size: 18px; padding-left: 10px; } .spmene input { opacity: 0; } .container { display: block; position: relative; padding-left: 35px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } .container input { position: absolute; opacity: 0; cursor: pointer; } .container:hover input ~ .checkmark { background-color: #837bad; } /* When the checkbox is checked, add a blue background */ .container input:checked ~ .checkmark { background-color: #6656AF; } .checkmark:after { content: ""; position: absolute; display: none; } .container input:checked ~ .checkmark:after { display: block; } .container .checkmark:after { left: 6px; top: 3px; width: 9px; height: 12px; border: solid white; border-width: 0 4px 4px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); } .checkbox { margin: 0; display: block; position: relative; padding-left: 2.05rem; padding-top: 0.25rem; cursor: pointer; user-select: none; margin-bottom: 1rem; } .checkmark_checked { background-size: auto; background: no-repeat center; background-size: 1.125rem; } .Vis_mer { opacity: 0; margin: 0; padding: 0 !important; margin-bottom: 0px; margin: 0px !important; cursor: pointer; } .vis_mer input { position: absolute; opacity: 0; } /* .spm div{ margin-bottom:10px; background-color: #FEF9F5; padding: 10px; border:1px; border-color: #F38100; border-style: solid; border-radius: 3px; font: sans-serif; border-radius: 2px; height: 50px; }*/ .svar { float: left; width: 450; } .svar div { background-color: white; padding-bottom: 10px !important; align-items: center; padding-left: 10px; padding-right: 10px; } .produkt { background-color: white !important; margin-top: 10px !important; /*border-color: black; border-bottom: 1px; border-bottom-style: solid;*/ overflow: hidden; padding-bottom: 0px !important; } .produkt div { float: right; padding: 12px; } .img { width: 40; height: 80; opacity: 1 !important; float: right; } .img:hover { color: #424242; opacity: 1 !important; transform: scale(5); -ms-transform: scale(5); /* IE 9 */ -webkit-transform: scale(5); /* Safari and Chrome */ } /* The sticky class is added to the navbar with JS when it reaches its scroll position */ .sticky { position: fixed; top: 0; width: 100% }'
 
 			// Load the rules and execute after the DOM loads
 			
@@ -6181,10 +6010,6 @@
 
 
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-<body>
 
 <h1> Finn din Vipps</h1>
 <div>
