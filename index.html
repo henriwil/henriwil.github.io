@@ -6066,36 +6066,29 @@
         
     </style>
 
-    <script type="text/javascript">
-        function toggle(el, svarId) {
+    <script type="text/javascript"> function toggle(el, svarId) 
+    {
             var e = document.getElementById(svarId);
-            var input = el.children[0];
-            console.log(el);
-
-           
-            if (input.checked)
-            {
-                input.checked = false;
-            }
-            else
-            {
-           		 input.checked = true;
-             }             
-
+            var input = el;
+     
 
             if (e.style.display == 'block')
             {
                 e.style.display = 'none';
+                input.checked = false;
                 
             }
             else
             {
                 e.style.display = 'block';
-             	
-        	}
+                
+                input.checked = true;
+                
+            }
 
             skrurProduktPaa();
-        }
+    }
+
         function skrurProduktPaa() {
             var a = 0;
             var innpakning;
@@ -6105,7 +6098,7 @@
                 i.toString();
                 var e = document.getElementById(i);
                 var go = document.getElementById("GO");
-                var input = e.children[0];
+                var input = e;
                 
                 if (input.checked) {
                     a = 1;
@@ -6194,55 +6187,57 @@
             <div class="spm">
                 <h2> Fortell litt om dere selv </h2>
                 <h5></h5>
-               
-                   <label class="spmene" id="30" onclick="toggle(this,'1');" >
+              
+                   <label class="spmene"  >
                    	Vi selger en vare, produkt eller tjeneste
-  							<input type="checkbox">
-  							<span class="checkmark"/>
+  							<input type="checkbox" id="30" onclick="toggle(this,'1');">
+  							<span class="checkmark" >
+                             
+                         </span>
 					</label>
                   
                
                 <div  >
-                    <label class="spmene" id="31" onclick="toggle(this,'2');" >
+                    <label class="spmene"  >
                                         Vi selger mat
-                            <input type="checkbox">
+                            <input type="checkbox" id="31" onclick="toggle(this,'2');">
                             <span class="checkmark"/>
                     </label>
                 </div>
                 <div >
-                     <label class="spmene" id="32" onclick="toggle(this,'3');">
+                     <label class="spmene" >
                                         Vi har take away eller forhåndsbestilling
 
-                            <input type="checkbox">
+                            <input type="checkbox" id="32" onclick="toggle(this,'3');">
                             <span class="checkmark"/>
                     </label>
                 </div>
 
                 <div >
-                    <label class="spmene" id="33" onclick="toggle(this,'5');">
+                    <label class="spmene" >
                                          Vi selger billetter eller bevis
 
-                            <input type="checkbox">
+                            <input type="checkbox" id="33" onclick="toggle(this,'5');">
                             <span class="checkmark"/>
                     </label>
                 </div>
                 <div >
-                  <label class="spmene" id="34" onclick="toggle(this,'6');">
+                  <label class="spmene" >
                                          Vi bruker kundeinfo i bestilling (Eks: Adresse)
-                            <input type="checkbox">
+                            <input type="checkbox" id="34" onclick="toggle(this,'6');">
                             <span class="checkmark"/>
                     </label>
                 </div>
                 <div >
-                    <label class="spmene" id="35" onclick="toggle(this,'7');">
+                    <label class="spmene" >
                                           Vi har et kassesystem
-                            <input type="checkbox">
+                            <input type="checkbox" id="35" onclick="toggle(this,'7');">
                             <span class="checkmark"/>
                     </label>
                 </div>
-                     <label class="spmene" id="36" onclick="toggle(this,'8');">
+                     <label class="spmene" >
                                          Vi har bonusordninger (Eks: Klippekort eller 2for1)
-                            <input type="checkbox">
+                            <input type="checkbox" id="36" onclick="toggle(this,'8');">
                             <span class="checkmark"/>
                     </label>
                 <div >
