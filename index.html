@@ -5913,7 +5913,7 @@
     padding-bottom: 15px;
     padding-left: 35px;
     
-    margin-top: 8px;
+    margin-top: 5px;
    
 
  
@@ -5977,6 +5977,7 @@
             margin-bottom: 0px;
             margin: 0px !important;
             cursor: pointer;
+            font-variant: italic;
         }
         .vis_mer input 
 				  {
@@ -6005,7 +6006,7 @@
 
         }
 
-        .svar div {
+       /* .svar div {
 
             background-color: white;
             padding-bottom: 10px !important;
@@ -6013,7 +6014,7 @@
             padding-left: 10px;
             padding-right: 10px;
 
-        }
+        }*/
 
         
 
@@ -6040,6 +6041,7 @@
             height: 80;
             opacity: 1 !important;
             float: right;
+            margin-left: 5px;
         }
 
         .img:hover {
@@ -6050,17 +6052,76 @@
             -webkit-transform: scale(5); /* Safari and Chrome */
         }
 
-      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%
+        .gif {
+            width: 80;
+            height: 80;
+            opacity: 1 !important;
+            float: right;
+            margin-left: 5px;
         }
+
+        .gif:hover {
+            color: #424242;
+            opacity: 1 !important;
+            -ms-transform: matrix(5, 0, 0, 5, 0, -180); /* IE 9 */
+    -webkit-transform: matrix(5, 0, 0, 5, 0, -180); /* Safari */
+    transform: matrix(5, 0, 0, 5, 0, -180);
+        }
+
+        /* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        .img:hover {
+            color: #424242;
+            opacity: 1 !important;
+            -ms-transform: matrix(5, 0, 0, 5, -200, 0); /* IE 9 */
+    -webkit-transform: matrix(5, 0, 0, 5,-200,0); /* Safari */
+    transform: matrix(5, 0, 0, 5, -200, 0);
+        }
+          .gif:hover {
+            color: #424242;
+            opacity: 1 !important;
+             -ms-transform: matrix(5, 0, 0, 5, -200, 0); /* IE 9 */
+    -webkit-transform: matrix(5, 0, 0, 5, -200, 0); /* Safari */
+    transform: matrix(5, 0, 0, 5, -200, 0);
+        }
+
+}
+
+
+      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+       
 
         /*.sticky + .content  KAN BRUKES TIL Å FÅ SMUDERE SCROLL
 {
   padding-top: 60px;
 } */
+
+#navbar {
+  overflow: hidden;
+  background-color: white;
+  margin-left: 20px;
+  padding-left: 10px;
+  margin-top: 10px;
+
+}
+
+#GO {
+  overflow: hidden;
+}
+
+ .sticky {
+            position: fixed;
+            top: 0;
+            width:500px;
+        }
+
+        .sticky + .content {
+  padding-top: 60px;
+}
+
+/* Navbar links */
+
+
         
     </style>
 
@@ -6140,8 +6201,8 @@
 			    rule += '.blue {background-color: blue}';
 			    rule += '.produkt a {float: right;padding: 13px !important;}'
 			    rule +='.checkmark { margin-top: 8px; top: 0; left: 0; position: absolute; height: 25px!important; width: 25px !important; padding-left:8px; padding-right: 8px; background-size: 0 0; border-radius: 0.3125rem; background-color: white; border: 0.125rem solid #6656AF; }'
-			    rule += ' .spm { float: left; margin-right: 10px; padding-bottom: 5px; margin-left: 10px; opacity: 0.75; }.innpakning { border-style: solid; border-width: 0.5px; border-left: 1px; border-right: 1px; padding-top: 10px; padding-bottom: 20px; } .svaret { display: none; opacity: 1; }'
-			    rule +=' /*# sourceMappingURL=style.css.map*/ body { box-sizing: border-box; margin-left: 10px; font-size: 18px; /*background-color: #ffd7b5;*/ } h1 { margin-top: 10px; margin-left: 20px; margin-bottom: 6px; opacity: 0.85; } h2 { margin-top: 10px; margin-left: 20px; } h3 { color: #6656AF; font-weight: bold; margin-bottom: 20px !important; font-size: 27; } h3 a { font-weight: normal; } h4 { font-weight: bold; opacity: 1 !important; margin-bottom: 7px !important; } p { margin-bottom: 0px; margin: -5px; opacity: 0.80; }'
+			    rule += ' .spm { float: left; margin-right: 10px; padding-bottom: 5px; margin-left: 10px; opacity: 0.75; }.innpakning { border-style: solid; border-width: 0.5px; border-left: 1px; border-right: 1px; padding-top: 10px; padding-bottom: 20px; } .svaret { margin-bottom:10px; display: none; opacity: 1; }'
+			    rule +=' /*# sourceMappingURL=style.css.map*/ body { box-sizing: border-box; margin-left: 10px; font-size: 18px; /*background-color: #ffd7b5;*/ } h1 { margin-top: 10px; margin-left: 10px; margin-bottom: 6px; opacity: 0.85; } h2 { margin-top: 10px; margin-left: 0px; } h3 { color: #6656AF; font-weight: bold; margin-bottom: 20px !important; font-size: 27; } h3 a { font-weight: normal; } h4 { font-weight: bold; opacity: 1 !important; margin-bottom: 7px !important; } p { margin-bottom: 0px; margin: -5px; opacity: 0.80; }'
 
 			// Load the rules and execute after the DOM loads
 			
@@ -6151,26 +6212,39 @@
         // STICKY PRODUKT!
 
 
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function () {
-            myFunction() };
+    // When the user scrolls the page, execute myFunction 
 
-        // Get the navbar
-        var navbar = document.getElementById("GO");
+window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction2()};
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
 
-        // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
 
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-                console.log(navbar + "stikky");
-            } else {
-                console.log(navbar + "ikke stikky")
-                navbar.classList.remove("sticky");
-            }
-        }
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+/*function myFunction2() {
+
+
+// Get the navbar
+var navbar = document.getElementById("GO");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}*/
 
 
     </script>
@@ -6184,10 +6258,12 @@
 
     <div class="row">
         <div class="cell medium-6">
+            
             <div class="spm">
                 <h2> Fortell litt om dere selv </h2>
                 <h5></h5>
-              
+               
+              <div>
                    <label class="spmene"  >
                    	Vi selger en vare, produkt eller tjeneste
   							<input type="checkbox" id="30" onclick="toggle(this,'1');">
@@ -6195,6 +6271,7 @@
                              
                          </span>
 					</label>
+                </div>
                <div >
                     <label class="spmene" >
                                         Vi selger gjennom en nettside
@@ -6278,6 +6355,8 @@
             </div>
         </div>
 
+<div class="row">
+    <div class="cell medium-6">
 
         <div class="svar" style="margin-left:10px;">
             <h2 style="margin-left: 20px;opacity: 0.7"> Produkter som kan passe</h2>
@@ -6285,7 +6364,7 @@
         <!--Vipps på nett-->
         <div id="11" class="innpakning" style="display: none">
             <div class="produkt">
-                <h3 style="float:left;margin-top: 5px !important;"">
+                <h3 style="float:left;margin-top: 5px !important">
                 Vipps på nett
                 </h3>
                 <h3>
@@ -6301,6 +6380,7 @@
                 <h4>
                     Gjør veien kortere til kjøp på din nettside
                 </h4>
+                <img style="float:right;" class="gif" src="eksempelhurtigkasse.gif">
                 Hold kundens kjøpsfokus ved å la de slippe kortinformasjon og adresse med Vipps utsjekk på din nettside.
                 Leveringsinfo henter vi ut, alt kunden trenger å gjøre er å bekreftet kjøpet.<br> Enklere blir det ikke. 
                 <div type="" onclick="toggle(this,'27');">
@@ -6343,7 +6423,7 @@
         <div id="9" class="innpakning" style="display: none;">
             <div class="produkt">
                 <h3 style="float:left;margin-top: 5px !important;">
-                    Vipps regninger
+                    Vipps Regning
                 </h3>
                 <h3>
                     <a style="float: right; padding: 12px !important"
@@ -6373,7 +6453,7 @@
 
         <!-- VIPPS GO  -->
         <div class="innpakning" style="display:none;"">
-            <div class="produkt" id="GO" style="display:none;margin-top: 0px !important">
+            <div class="produkt" id="GO" style="display:none;">
                 <h3 style="float:left;margin-top: 5px !important;">
                     VippsGo
                 </h3>
@@ -6386,8 +6466,8 @@
             </div>
             <div class="svaret" id="1" style="display: none">
 
-                <h4>Få ditt utvalg i Vipps</h4>
-                <img style="float:right;" class="img" src="Meny.jpeg">
+                <h4>Få ditt utvalg i Vippsappen</h4>
+                <img style="float:right;" class="gif" src="bestillVippsGo.gif">
                 Gi 2,8 millioner Vippsere tilgang til ditt utvalg<br>
                 og få oversiktilige salgsrapporter <br>
 
@@ -6405,7 +6485,7 @@
 
             <div class="svaret" id="2" style="display: none">
                 <h4 class "overskrift"> Kunden bestiller og betaler i Vipps </h4>
-                <img class="img" src="Meny.jpeg">
+                <img style="float:right;" class="img" src="Meny.jpeg">
                 Senk presset på servitørene og øk salget: La kundene bestille og betale for mat og drikke i Vipps. Her kan de både oppgi allergier og gi tips.
                 <div onclick="toggle(this,'21');">
                     <input class="Vis_mer" type="checkbox"> Vis mer
@@ -6422,7 +6502,7 @@
 
 
             <div class="svaret" id="3" style="display: none">
-                <h4 class "overskrift">Take away og null kø!</h4>
+                <h4 class "overskrift">Take away!</h4>
                 Slipp telefonkø for bestilling: Kundene bestiller og betaler i Vipps, mens dere sier fra når maten er klar. Vipps så har dere Take Away!
 
                 <div type="" onclick="toggle(this,'22');">
@@ -6440,8 +6520,11 @@
             </div>
             <div class="svaret" id="5" style="display: none">
 
-                <img class="img" src="Billett.jpeg">
-                <h4>Dine billetter eller beviser i Vipps</h4>
+                
+                <h4>Få billetter eller beviser i Vipps</h4>
+                <img style="float:right;" class="img" src="Billett.jpeg">
+                <img style="float:right;" class="img" src="billettBestilling.gif">
+
                 Enkel og billig håndtering av billetter til små og store arrangementer, men også til transportbilletter. <br> Utvalget setter du opp kjapt, og kundene finner og betaler for billettene direkte i Vipps. 
                 Billettene godkjenner du i appen ved døra.
 
@@ -6457,6 +6540,7 @@
 
             <div class="svaret" id="6" style="display: none">
                 <h4>La kunden glemme adressen sin</h4>
+                 <img style="float:right;" class="img" src="Kundeinformasjon.png">
                 Når kunder gjør et kjøp hos din bedrift, så kan vi med kundens godkjenning, automatisk hente ut kundeinfo. Navn, adresse og epost er standard.<br>
                 <div type="" onclick="toggle(this,'24');">
                     <input class="Vis_mer" type="checkbox"> Vis mer
@@ -6469,7 +6553,7 @@
 
             </div>
             <div class="svaret" id="7" style="display: none">
-                <h4> Vipps + ditt kassesytem = sant</h4> 
+                <h4> Vipps + ditt kassesystem = sant</h4> 
                 VippsGo har ferdige integrasjoner med
                 flere kassesystem, slik at alt blir avstemt og samlet på ett sted med kun én salgsrapport.
                 <div type="" onclick="toggle(this,'25');">
@@ -6502,6 +6586,8 @@
 
         
     </div>
+</div>
+</div>
 </div>
 </div>
 
