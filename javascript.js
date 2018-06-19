@@ -67,23 +67,25 @@ function elementInViewport(el) {
   }
   
   return (
-    top >= window.pageYOffset &&
-    left >= window.pageXOffset &&
-    (top + height) <= (window.pageYOffset + window.innerHeight) &&
-    (left + width) <= (window.pageXOffset + window.innerWidth)
+    (
+      top >= window.pageYOffset &&
+      left >= window.pageXOffset &&
+      (top + height) <= (window.pageYOffset + window.innerHeight) &&
+      (left + width) <= (window.pageXOffset + window.innerWidth)
+    ) || top <= window.pageYOffset 
   );
 }
 
 window.smoothScroll = function(target) {
   var scrollContainer = target;
-  do { //find scroll container
+  do { 
     scrollContainer = scrollContainer.parentNode;
     if (!scrollContainer) return;
     scrollContainer.scrollTop += 1;
   } while (scrollContainer.scrollTop == 0);
   
   var targetY = 0;
-  do { //find the top of target relatively to the container
+  do { 
     if (target == scrollContainer) break;
     targetY += target.offsetTop;
   } while (target = target.offsetParent);
@@ -93,6 +95,6 @@ window.smoothScroll = function(target) {
     c.scrollTop = a + (b - a) / 30 * i;
     setTimeout(function(){ scroll(c, a, b, i); }, 10);
   }
-  // start scrolling
+  
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
