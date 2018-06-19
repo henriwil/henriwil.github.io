@@ -22,21 +22,31 @@ body {
     box-shadow: 0px 2px 4px #e4e4e4;    
 }
 
-.sticky-produckt-counter {
-    
-}
-
 .vipps-checkbox {
     word-break: normal !important;
 }
 
+#product-section {
+    display: none;
+}
+
+#sticky-product-counter {
+    display: none;
+    position: fixed;
+    bottom: -1000px;
+}
+
 .sticky {
-    background-color: #49367e;
+    margin-right: 0;
+    
+    font-size: 16px;
+    font-weight: 700;
     text-align: center;
     color: white;
     text-align: center;
     padding: 20px;
 
+    z-index: 100;
     width: 95%;
     position: fixed;
     left: 50%;
@@ -44,7 +54,15 @@ body {
     margin-bottom: 5px;
     
     position: fixed;
-    bottom: 0;
+    bottom: 0 !important;
+
+    background-color: #49367e;
+    
+}
+
+.arrow {
+    margin-left: 14px;
+    margin-top: -4px;
 }
 
 .circle {
