@@ -29,9 +29,9 @@ Svar (1 er checkbox, bokstav er produkt, .1 er linje etter overskrift, .V er vis
 2.B.1 Alt kunden gjør er å taste inn telefonnummer 
 2.B.V Velg Hurtigkasse når du bestiller, så henter vi også ut adresseinfo til kunden, slik at kunden kan kjøpe noe på 5 trykk.
 
-3.A Kunden bestiller selv, servitørerne kan håndtere flere
+3.A Kunden bestiller selv, servitørene kan håndtere flere
 3.A.1 Oppgi bordnummer eller hente i kassen
-3.A.V  Enkelt å holde kontroll på allergier og motta tips. Bestillingen kan sees på ipad eller pc, eller integreres direkte med bongprinter.
+3.A.V Enkelt å holde kontroll på allergier og motta tips. Bestillingen kan sees på nettbrett eller pc, eller integreres direkte med bongprinter.
 
 4.A Billig og enkel billetthåndtering
 4.A.1 Du godkjenner billetten i døra
@@ -40,11 +40,11 @@ Utvalget setter du kjapt opp og du kan ha flere turer/dager på samme billett.
 
 5.B La kunden glemme adressen
 5.B.1 Vipps fikser kundeinfo, helt magisk
-5.B.V  Navn, adresse og epost er standard. Det er mulig å be om spesifikk data som medlemsnummer, registreringsnummer eller favorittfarge.
+5.B.V Navn, adresse og epost er standard. Det er mulig å be om spesifikk data som medlemsnummer, registreringsnummer eller favorittfarge.
 
 5.A La kunden glemme adressen
 5.A.1 Vipps fikser kundeinfo, helt magisk
-5.A.V  Navn, adresse og epost er standard. Det er mulig å be om spesifikk data som medlemsnummer, registreringsnummer eller favorittfarge.
+5.A.V Navn, adresse og epost er standard. Det er mulig å be om spesifikk data som medlemsnummer, registreringsnummer eller favorittfarge.
 
 6.A Vipps så er Take Away enkelt
 6.A.1 Legg til henting eller levering i menyen
@@ -72,8 +72,8 @@ I appen kan du enkelt definere tilgangsnivå til ulike ansatte, slik du er vant 
 Kassapartnere: PC Kasse, SMS, RetailPOS og KDR
 
 
-V:
-Det koster ingenting å ha VippsGo, man betaler kun en cut av det dere får solgt gjennom Vipps: 2,25% av kjøpsbeløp. 
+På slutten av alle .V:
+Det koster ingenting å ha VippsGo, man betaler kun en prosentandel(2,25%) per salg fra menyen i Vipps.
 
 For veldedige organisasjoner er det 1,75%
 
