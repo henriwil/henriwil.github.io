@@ -13,6 +13,12 @@ body {
     background-color: #F8F8F8;
 }
 
+@media (min-width: 760px) {
+    body {
+        background: white;
+    }
+}
+
 .grid-container {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -54,6 +60,13 @@ button:focus {
     padding-left: .625rem;
     box-shadow: 0px 2px 2px #e4e4e4;    
 }
+
+@media (min-width: 760px) {
+    .shadow {
+        box-shadow: none;
+    }
+}
+
 
 .vipps-checkbox {
     word-break: normal !important;
@@ -120,6 +133,19 @@ button:focus {
     text-align: center;
     width: 1.6em;
     margin-top: -16px;
+}
+
+.desktop-feedback {
+    display: none;
+}
+
+@media (min-width: 760px) {
+    .desktop-feedback {
+        display: block;
+    }
+    .mobile-feedback {
+        display: none;
+    }
 }
 
 /**************************\

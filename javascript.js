@@ -1,15 +1,18 @@
+// TODO: call on stop
 window.onscroll = function() {checkStickyHeader()};
 MicroModal.init();
 
 function toggle(input, answerId) {
-  countNumberOfProducts();
-  var answer = document.getElementById(answerId);
-  input.checked != input.checked;
-  answer.style.display = input.checked ? 'block' : 'none';
-  turnProductOn();
+  setTimeout(function() {
+    var answer = document.getElementById(answerId);
+    answer.style.display = input.checked ? 'block' : 'none';
+    
+    countNumberOfProducts();
+    toggleVippsGoWrapper();
+  }, 0)
 }
 
-function turnProductOn() {
+function toggleVippsGoWrapper() {
   var isGoCheckBox = false;
   var goWrapper = document.getElementById("GO");
   
@@ -77,6 +80,7 @@ function elementInViewport(el) {
 }
 
 window.smoothScroll = function(target) {
+  // TODO: Do better
   var scrollContainer = target;
   do { 
     scrollContainer = scrollContainer.parentNode;
