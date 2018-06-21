@@ -1,48 +1,50 @@
-// TODO: call on stop
-window.onscroll = function() {checkStickyHeader()};
+window.onscroll = debounce(function() { checkStickyHeader() }, 100);
 MicroModal.init();
 
 function toggle(input, answerId) {
   setTimeout(function() {
+    
     var answer = document.getElementById(answerId);
     answer.style.display = input.checked ? 'block' : 'none';
     
     countNumberOfProducts();
     toggleVippsGoWrapper();
+    
   }, 0)
 }
 
 function toggleVippsGoWrapper() {
-  var isGoCheckBox = false;
-  var goWrapper = document.getElementById("GO");
+  var showVippsGo;
+  var goWrapper = document.getElementById("go-wrapper");
+  var vippsGoChildren = goWrapper.childNodes;
   
-  for (var i = 30; i < 38; i++) {
-    var input = document.getElementById(i.toString());
-    if (input.checked) {
-      isGoCheckBox = true;
+  for(child in vippsGoChildren){
+    if (vippsGoChildren[child].style && vippsGoChildren[child].style.display === 'block') {
+      showVippsGo = true;
     }
   }
-  goWrapper.style.display = isGoCheckBox ? 'block' : 'none';
+  goWrapper.style.display = showVippsGo ? 'block' : 'none';
 }
 
 function countNumberOfProducts() {
   var answers = document.querySelectorAll('input[type="checkbox"]:checked').length;
-  var numberElements = document.getElementsByClassName('number-of-products');
   
-  var x = document.getElementById("product-section");
-  var y = document.getElementById("sticky-product-counter");
+  var productSectionElement = document.getElementById("product-section");
+  var stickyCounterElement = document.getElementById("sticky-product-counter");
+  var numberOfProductElements = document.getElementsByClassName('number-of-products');
+  
   if(answers > 0) {
-    x.style.display = "block";
-    y.style.display = "block";
-    if(!elementInViewport(document.getElementById("product-section"))) {
-      y.classList.add("sticky");
+    productSectionElement.style.display = "block";
+    stickyCounterElement.style.display = "block";
+    if(!elementInViewport(productSectionElement)) {
+      stickyCounterElement.classList.add("sticky");
     }
   } else {
-    x.style.display = "none";
-    y.style.display = "none";
+    productSectionElement.style.display = "none";
+    stickyCounterElement.style.display = "none";
   }
   
-  [].slice.call( numberElements ).forEach(function ( number ) {
+  [].slice.call( numberOfProductElements ).forEach(function ( number ) {
     number.innerHTML = answers;
   });
   
@@ -80,7 +82,6 @@ function elementInViewport(el) {
 }
 
 window.smoothScroll = function(target) {
-  // TODO: Do better
   var scrollContainer = target;
   do { 
     scrollContainer = scrollContainer.parentNode;
@@ -102,3 +103,18 @@ window.smoothScroll = function(target) {
   
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
+
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
