@@ -6,14 +6,8 @@ window.onscroll = debounce(function () {
 
 function toggle(input, answerQuerySelector) {
   setTimeout(function () {
-  
     var answer = find(answerQuerySelector);
-    
-    if (input.checked) {
-      show(answer)
-    } else {
-      hide(answer)
-    }
+    input.checked ? show(answer) : hide(answer);
     
     countNumberOfProducts();
     toggleVippsGoWrapper();
@@ -31,12 +25,7 @@ function toggleVippsGoWrapper() {
       showVippsGo = true;
     }
   }
-  
-  if (showVippsGo) {
-    show(vippsGoWrapper)
-  } else {
-    hide(vippsGoWrapper)
-  }
+  showVippsGo ? show(vippsGoWrapper) : hide(vippsGoWrapper);
 }
 
 function countNumberOfProducts() {
@@ -78,8 +67,8 @@ function find(identifier) {
 }
 
 function checkStickyProductCount() {
-  var productCounter = document.getElementById("sticky-product-counter");
-  if (elementInViewport(document.getElementById("product-section"))) {
+  var productCounter = find("#sticky-product-counter");
+  if (elementInViewport(find("#product-section"))) {
     productCounter.classList.remove("sticky");
   } else {
     productCounter.classList.add("sticky");
