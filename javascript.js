@@ -1,11 +1,19 @@
-window.onscroll = debounce(function() { checkStickyHeader() }, 100);
 MicroModal.init();
+window.onscroll = debounce(function () {
+  checkStickyProductCount()
+}, 100);
 
-function toggle(input, answerId) {
-  setTimeout(function() {
+
+function toggle(input, answerQuerySelector) {
+  setTimeout(function () {
+  
+    var answer = find(answerQuerySelector);
     
-    var answer = document.getElementById(answerId);
-    answer.style.display = input.checked ? 'block' : 'none';
+    if (input.checked) {
+      show(answer)
+    } else {
+      hide(answer)
+    }
     
     countNumberOfProducts();
     toggleVippsGoWrapper();
@@ -15,42 +23,61 @@ function toggle(input, answerId) {
 
 function toggleVippsGoWrapper() {
   var showVippsGo;
-  var goWrapper = document.getElementById("go-wrapper");
-  var vippsGoChildren = goWrapper.childNodes;
+  var vippsGoWrapper = find("#vipps-go-wrapper");
+  var vippsGoChildren = vippsGoWrapper.childNodes;
   
-  for(child in vippsGoChildren){
+  for (child in vippsGoChildren) {
     if (vippsGoChildren[child].style && vippsGoChildren[child].style.display === 'block') {
       showVippsGo = true;
     }
   }
-  goWrapper.style.display = showVippsGo ? 'block' : 'none';
+  
+  if (showVippsGo) {
+    show(vippsGoWrapper)
+  } else {
+    hide(vippsGoWrapper)
+  }
 }
 
 function countNumberOfProducts() {
   var answers = document.querySelectorAll('input[type="checkbox"]:checked').length;
   
-  var productSectionElement = document.getElementById("product-section");
-  var stickyCounterElement = document.getElementById("sticky-product-counter");
-  var numberOfProductElements = document.getElementsByClassName('number-of-products');
+  var productSectionElement = find("#product-section");
+  var stickyCounterElement = find("#sticky-product-counter");
+  var numberOfProductElements = find('.number-of-products');
   
-  if(answers > 0) {
-    productSectionElement.style.display = "block";
-    stickyCounterElement.style.display = "block";
-    if(!elementInViewport(productSectionElement)) {
+  if (answers > 0) {
+    show(stickyCounterElement);
+    show(productSectionElement);
+    
+    if (!elementInViewport(productSectionElement)) {
       stickyCounterElement.classList.add("sticky");
     }
   } else {
-    productSectionElement.style.display = "none";
-    stickyCounterElement.style.display = "none";
+    hide(stickyCounterElement);
+    hide(productSectionElement);
   }
   
-  [].slice.call( numberOfProductElements ).forEach(function ( number ) {
+  [].slice.call(numberOfProductElements).forEach(function (number) {
     number.innerHTML = answers;
   });
   
 }
 
-function checkStickyHeader() {
+function show(element) {
+  element.style.display = "block"
+}
+function hide(element) {
+  element.style.display = "none"
+}
+
+function find(identifier) {
+  return document.querySelectorAll(identifier).length === 1 ? 
+    document.querySelectorAll(identifier)[0] :
+    document.querySelectorAll(identifier) ;
+}
+
+function checkStickyProductCount() {
   var productCounter = document.getElementById("sticky-product-counter");
   if (elementInViewport(document.getElementById("product-section"))) {
     productCounter.classList.remove("sticky");
@@ -65,7 +92,7 @@ function elementInViewport(el) {
   var width = el.offsetWidth;
   var height = el.offsetHeight;
   
-  while(el.offsetParent) {
+  while (el.offsetParent) {
     el = el.offsetParent;
     top += el.offsetTop;
     left += el.offsetLeft;
@@ -77,28 +104,31 @@ function elementInViewport(el) {
       left >= window.pageXOffset &&
       (top + height) <= (window.pageYOffset + window.innerHeight) &&
       (left + width) <= (window.pageXOffset + window.innerWidth)
-    ) || top <= window.pageYOffset 
+    ) || top <= window.pageYOffset
   );
 }
 
-window.smoothScroll = function(target) {
+window.smoothScroll = function (target) {
   var scrollContainer = target;
-  do { 
+  do {
     scrollContainer = scrollContainer.parentNode;
     if (!scrollContainer) return;
     scrollContainer.scrollTop += 1;
   } while (scrollContainer.scrollTop == 0);
   
   var targetY = 0;
-  do { 
+  do {
     if (target == scrollContainer) break;
     targetY += target.offsetTop;
   } while (target = target.offsetParent);
   
-  scroll = function(c, a, b, i) {
-    i++; if (i > 30) return;
+  scroll = function (c, a, b, i) {
+    i++;
+    if (i > 30) return;
     c.scrollTop = a + (b - a) / 30 * i;
-    setTimeout(function(){ scroll(c, a, b, i); }, 10);
+    setTimeout(function () {
+      scroll(c, a, b, i);
+    }, 10);
   }
   
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
@@ -106,9 +136,9 @@ window.smoothScroll = function(target) {
 
 function debounce(func, wait, immediate) {
   var timeout;
-  return function() {
+  return function () {
     var context = this, args = arguments;
-    var later = function() {
+    var later = function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
